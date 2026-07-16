@@ -1,0 +1,49 @@
+/* ═══════════════════════════════════════════════════
+   RANTANGINN — Design System
+   Colors: Deep Olive #4a5c1a | Medium Olive #6b7c2a
+            Deep Gold #c8971a  | Cream #f5f0e0
+   Font: Poppins
+═══════════════════════════════════════════════════ */
+
+/* ── TOKENS ── */
+:root {
+  --olive-deep:    #4a5c1a;
+  --olive-mid:     #6b7c2a;
+  --olive-light:   #8fa83a;
+  --olive-pale:    #d4e09a;
+  --gold:          #c8971a;
+  --gold-light:    #e8b84b;
+  --gold-pale:     #fef3d0;
+  --cream:         #f5f0e0;
+  --cream-dark:    #ede5cc;
+  --white:         #ffffff;
+  --text-dark:     #1e2510;
+  --text-mid:      #3d4a1a;
+  --text-muted:    #6b7550;
+  --border:        #d6ddb8;
+  --shadow-sm:     0 2px 8px rgba(74,92,26,.10);
+  --shadow-md:     0 6px 24px rgba(74,92,26,.15);
+  --shadow-lg:     0 16px 48px rgba(74,92,26,.20);
+  --radius-sm:     8px;
+  --radius-md:     14px;
+  --radius-lg:     22px;
+  --radius-xl:     32px;
+  --transition:    0.25s cubic-bezier(.4,0,.2,1);
+  --font:          'Poppins', sans-serif;
+  --max-w:         1200px;
+}
+
+/* ── RESET & BASE ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: var(--font);
+  background: var(--cream);
+  color: var(--text-dark);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+em { font-style: normal; }

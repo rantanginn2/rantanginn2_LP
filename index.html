@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rantanginn – Makan Siang Tanpa Ribet, Depok</title>
+  <meta name="description" content="Rantanginn hadir di Depok! Makanan tradisional rumahan yang sehat, segar, dan terjangkau. Daftar sekarang untuk jadi yang pertama tahu saat kami launch." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a href="#" class="navbar__brand" aria-label="Rantanginn beranda">
+        <svg class="navbar__logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 56" fill="none" aria-hidden="true">
+          <rect x="8" y="4"  width="32" height="8" rx="4" fill="#4a5c1a"/>
+          <rect x="6" y="14" width="36" height="9" rx="3" fill="#6b7c2a"/>
+          <rect x="6" y="25" width="36" height="9" rx="3" fill="#4a5c1a"/>
+          <rect x="6" y="36" width="36" height="9" rx="3" fill="#6b7c2a"/>
+          <rect x="19" y="46" width="10" height="6" rx="3" fill="#4a5c1a"/>
+          <circle cx="37" cy="10" r="2.5" fill="#c8971a"/>
+        </svg>
+        <span class="navbar__brand-text">RANTANG<span class="accent">IN</span></span>
+      </a>
+      <nav class="navbar__links" aria-label="Navigasi utama">
+        <a href="#cara-kerja">Cara Kerja</a>
+        <a href="#menu">Menu</a>
+        <a href="#nilai">Keunggulan</a>
+        <a href="#form-top" class="btn btn--gold btn--sm">Daftar Sekarang</a>
+      </nav>
+      <button class="navbar__hamburger" aria-label="Buka menu" aria-expanded="false" aria-controls="navbar__links">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════════
+         HERO + LEAD FORM  (paling atas halaman)
+    ════════════════════════════════════════════ -->
+    <section class="hero" id="form-top" aria-labelledby="hero-heading">
+      <div class="hero__bg-pattern" aria-hidden="true"></div>
+      <div class="container hero__inner">
+
+        <!-- Kiri: Copy -->
+        <div class="hero__copy">
+          <span class="badge badge--launch">🚀 Segera Hadir di Depok</span>
+          <h1 id="hero-heading" class="hero__heading">
+            Makan Siang<br/>
+            <em class="accent">Tanpa Ribet,</em><br/>
+            Tanpa Khawatir
+          </h1>
+          <p class="hero__sub">
+            Rantanginn menghadirkan masakan tradisional rumahan yang sehat, segar, dan terjangkau — dikirim langsung ke meja kerja atau rumahmu di Depok.
+          </p>
+
+          <ul class="hero__values" aria-label="Nilai utama Rantanginn">
+            <li><span class="hero__value-icon" aria-hidden="true">⏱</span><span>Efisiensi</span></li>
+            <li><span class="hero__value-icon" aria-hidden="true">🌿</span><span>Kesegaran</span></li>
+            <li><span class="hero__value-icon" aria-hidden="true">💰</span><span>Keterjangkauan</span></li>
+          </ul>
+
+          <div class="countdown" aria-label="Hitung mundur peluncuran" aria-live="polite">
+            <div class="countdown__item">
+              <span class="countdown__num" id="cd-days">00</span>
+              <span class="countdown__label">Hari</span>
+            </div>
+            <span class="countdown__sep" aria-hidden="true">:</span>
+            <div class="countdown__item">
+              <span class="countdown__num" id="cd-hours">00</span>
+              <span class="countdown__label">Jam</span>
+            </div>
+            <span class="countdown__sep" aria-hidden="true">:</span>
+            <div class="countdown__item">
+              <span class="countdown__num" id="cd-mins">00</span>
+              <span class="countdown__label">Menit</span>
+            </div>
+            <span class="countdown__sep" aria-hidden="true">:</span>
+            <div class="countdown__item">
+              <span class="countdown__num" id="cd-secs">00</span>
+              <span class="countdown__label">Detik</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kanan: Lead Form -->
+        <div class="hero__form-wrap">
+          <div class="lead-form" role="region" aria-labelledby="form-heading">
+            <div class="lead-form__header">
+              <p class="lead-form__eyebrow">✨ Pre-Launch Eksklusif</p>
+              <h2 id="form-heading" class="lead-form__title">Daftar &amp; Dapatkan<br/>Diskon 20%</h2>
+              <p class="lead-form__desc">Jadilah yang pertama tahu saat Rantanginn hadir di Depok. Early bird mendapatkan penawaran spesial!</p>
+            </div>
+
+            <form class="lead-form__form" id="leadForm" novalidate>
+              <div class="form-group">
+                <label for="nama" class="form-label">Nama Lengkap <span aria-hidden="true" class="required-star">*</span></label>
+                <input type="text" id="nama" name="nama" class="form-input"
+                  placeholder="Masukkan nama kamu" required autocomplete="name" aria-required="true" />
+                <span class="form-error" id="nama-error" role="alert"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="whatsapp" class="form-label">Nomor WhatsApp <span aria-hidden="true" class="required-star">*</span></label>
+                <div class="input-group">
+                  <span class="input-prefix" aria-hidden="true">+62</span>
+                  <input type="tel" id="whatsapp" name="whatsapp" class="form-input"
+                    placeholder="8xx-xxxx-xxxx" required autocomplete="tel"
+                    aria-required="true" inputmode="numeric" />
+                </div>
+                <span class="form-error" id="wa-error" role="alert"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="area" class="form-label">Area di Depok</label>
+                <select id="area" name="area" class="form-input form-select">
+                  <option value="" disabled selected>Pilih kecamatan kamu</option>
+                  <option value="beji">Beji</option>
+                  <option value="bojongsari">Bojongsari</option>
+                  <option value="cilodong">Cilodong</option>
+                  <option value="cimanggis">Cimanggis</option>
+                  <option value="cinere">Cinere</option>
+                  <option value="cipayung">Cipayung</option>
+                  <option value="limo">Limo</option>
+                  <option value="pancoran-mas">Pancoran Mas</option>
+                  <option value="sawangan">Sawangan</option>
+                  <option value="sukmajaya">Sukmajaya</option>
+                  <option value="tapos">Tapos</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <p class="form-label" id="kebutuhan-label">Kebutuhan Utama</p>
+                <div class="checkbox-group" role="group" aria-labelledby="kebutuhan-label">
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="kebutuhan" value="harian" />
+                    <span class="checkbox-custom" aria-hidden="true"></span>
+                    Makan harian
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="kebutuhan" value="katering-kantor" />
+                    <span class="checkbox-custom" aria-hidden="true"></span>
+                    Katering kantor
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="kebutuhan" value="acara" />
+                    <span class="checkbox-custom" aria-hidden="true"></span>
+                    Acara &amp; event
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="kebutuhan" value="diet" />
+                    <span class="checkbox-custom" aria-hidden="true"></span>
+                    Menu diet sehat
+                  </label>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn--gold btn--full btn--lg" id="submitBtn">
+                <span class="btn__text">Daftar Sekarang – Gratis!</span>
+                <span class="btn__loader" aria-hidden="true"></span>
+              </button>
+
+              <p class="lead-form__privacy">🔒 Data kamu aman. Tidak ada spam, bisa berhenti kapanpun.</p>
+            </form>
+
+            <!-- Success state -->
+            <div class="lead-form__success" id="formSuccess" aria-live="polite" hidden>
+              <div class="success-icon" aria-hidden="true">✓</div>
+              <h3>Yeay, kamu terdaftar!</h3>
+              <p>Kami akan menghubungi kamu via WhatsApp saat Rantanginn siap hadir di area kamu. Nantikan kejutannya! 🎉</p>
+              <a href="https://wa.me/6282xxxxxxxx?text=Halo+Rantanginn%2C+saya+sudah+daftar+pre-launch!"
+                target="_blank" rel="noopener noreferrer" class="btn btn--outline-gold">
+                Hubungi Kami di WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SOCIAL PROOF STRIP -->
+    <section class="strip" aria-label="Statistik Rantanginn">
+      <div class="container strip__inner">
+        <div class="strip__item">
+          <strong>200+</strong>
+          <span>Sudah Daftar</span>
+        </div>
+        <div class="strip__divider" aria-hidden="true"></div>
+        <div class="strip__item">
+          <strong>100%</strong>
+          <span>Bahan Segar</span>
+        </div>
+        <div class="strip__divider" aria-hidden="true"></div>
+        <div class="strip__item">
+          <strong>5 ★</strong>
+          <span>Rating Uji Coba</span>
+        </div>
+        <div class="strip__divider" aria-hidden="true"></div>
+        <div class="strip__item">
+          <strong>Depok</strong>
+          <span>Kota Pertama</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARA KERJA -->
+    <section class="how-it-works section" id="cara-kerja" aria-labelledby="how-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Mudah Banget</span>
+          <h2 id="how-heading" class="section-title">Cara Kerja Rantanginn</h2>
+          <p class="section-desc">Dari pesan sampai makanan di tangan kamu — prosesnya sesederhana ini.</p>
+        </div>
+        <ol class="steps" aria-label="Langkah pemesanan">
+          <li class="step">
+            <div class="step__num" aria-hidden="true">1</div>
+            <div class="step__icon" aria-hidden="true">📱</div>
+            <h3 class="step__title">Pilih Paket</h3>
+            <p class="step__desc">Pilih paket harian, mingguan, atau bulanan sesuai kebutuhan dan selera kamu.</p>
+          </li>
+          <li class="step">
+            <div class="step__num" aria-hidden="true">2</div>
+            <div class="step__icon" aria-hidden="true">👩‍🍳</div>
+            <h3 class="step__title">Kami Masak</h3>
+            <p class="step__desc">Chef kami menyiapkan masakan rumahan dari bahan segar setiap pagi untuk kamu.</p>
+          </li>
+          <li class="step">
+            <div class="step__num" aria-hidden="true">3</div>
+            <div class="step__icon" aria-hidden="true">🛵</div>
+            <h3 class="step__title">Diantar ke Kamu</h3>
+            <p class="step__desc">Dikirim tepat waktu ke lokasi kamu di Depok dalam rantang higienis dan rapi.</p>
+          </li>
+          <li class="step">
+            <div class="step__num" aria-hidden="true">4</div>
+            <div class="step__icon" aria-hidden="true">😍</div>
+            <h3 class="step__title">Nikmati!</h3>
+            <p class="step__desc">Makan siang istimewa seperti masakan ibu — tanpa keluar kantor atau masak sendiri.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- PREVIEW MENU -->
+    <section class="menu section section--alt" id="menu" aria-labelledby="menu-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Sneak Peek</span>
+          <h2 id="menu-heading" class="section-title">Menu Unggulan Kami</h2>
+          <p class="section-desc">Resep tradisional, bahan pilihan, dimasak dengan cinta setiap hari.</p>
+        </div>
+        <div class="menu-grid" role="list">
+          <article class="menu-card" role="listitem">
+            <div class="menu-card__img-wrap">
+              <div class="menu-card__img menu-card__img--1" role="img" aria-label="Rantang Ayam Geprek Set"></div>
+              <span class="menu-card__tag">Terlaris</span>
+            </div>
+            <div class="menu-card__body">
+              <h3 class="menu-card__title">Rantang Ayam Geprek Set</h3>
+              <p class="menu-card__desc">Ayam geprek sambal bawang, nasi putih, tumis kangkung, tahu goreng &amp; kerupuk.</p>
+              <div class="menu-card__footer">
+                <span class="menu-card__price">Mulai Rp 28.000</span>
+                <span class="menu-card__rating" aria-label="Rating 5 bintang">★★★★★</span>
+              </div>
+            </div>
+          </article>
+          <article class="menu-card" role="listitem">
+            <div class="menu-card__img-wrap">
+              <div class="menu-card__img menu-card__img--2" role="img" aria-label="Rantang Rendang Sapi Set"></div>
+              <span class="menu-card__tag menu-card__tag--gold">Chef's Pick</span>
+            </div>
+            <div class="menu-card__body">
+              <h3 class="menu-card__title">Rantang Rendang Sapi Set</h3>
+              <p class="menu-card__desc">Rendang sapi empuk bumbu Padang, nasi putih, perkedel kentang &amp; sayur nangka.</p>
+              <div class="menu-card__footer">
+                <span class="menu-card__price">Mulai Rp 35.000</span>
+                <span class="menu-card__rating" aria-label="Rating 5 bintang">★★★★★</span>
+              </div>
+            </div>
+          </article>
+          <article class="menu-card" role="listitem">
+            <div class="menu-card__img-wrap">
+              <div class="menu-card__img menu-card__img--3" role="img" aria-label="Rantang Ikan Bakar Set"></div>
+            </div>
+            <div class="menu-card__body">
+              <h3 class="menu-card__title">Rantang Ikan Bakar Set</h3>
+              <p class="menu-card__desc">Ikan bakar bumbu kecap, nasi uduk, lalapan segar, sambal tomat &amp; tempe orek.</p>
+              <div class="menu-card__footer">
+                <span class="menu-card__price">Mulai Rp 30.000</span>
+                <span class="menu-card__rating" aria-label="Rating 4.8 bintang">★★★★½</span>
+              </div>
+            </div>
+          </article>
+        </div>
+        <p class="menu__more">+ Lebih dari 20 menu berputar setiap minggunya</p>
+      </div>
+    </section>
+
+    <!-- NILAI & KEUNGGULAN -->
+    <section class="values section" id="nilai" aria-labelledby="values-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Kenapa Rantanginn?</span>
+          <h2 id="values-heading" class="section-title">Lebih dari Sekadar Katering</h2>
+        </div>
+        <div class="values-grid">
+          <div class="value-card">
+            <span class="value-card__icon" aria-hidden="true">⏱</span>
+            <h3 class="value-card__title">Efisiensi Waktu</h3>
+            <p class="value-card__desc">Tidak perlu antri, tidak perlu masak. Rantang datang ke kamu tepat waktu, setiap hari.</p>
+          </div>
+          <div class="value-card">
+            <span class="value-card__icon" aria-hidden="true">🌿</span>
+            <h3 class="value-card__title">Bahan Segar Setiap Hari</h3>
+            <p class="value-card__desc">Bahan dibelanja setiap pagi dari pasar terdekat. Tidak ada frozen food, tidak ada pengawet.</p>
+          </div>
+          <div class="value-card">
+            <span class="value-card__icon" aria-hidden="true">💚</span>
+            <h3 class="value-card__title">Masakan Rumahan</h3>
+            <p class="value-card__desc">Resep tradisional Indonesia yang dimasak dengan teknik dan cita rasa seperti masakan ibu.</p>
+          </div>
+          <div class="value-card">
+            <span class="value-card__icon" aria-hidden="true">💰</span>
+            <h3 class="value-card__title">Harga Terjangkau</h3>
+            <p class="value-card__desc">Paket mulai dari Rp 28.000/rantang. Lebih hemat dengan paket mingguan atau bulanan.</p>
+          </div>
+          <div class="value-card">
+            <span class="value-card__icon" aria-hidden="true">📦</span>
+            <h3 class="value-card__title">Kemasan Higienis</h3>
+            <p class="value-card__desc">Disajikan dalam rantang food-grade yang bersih, rapi, dan ramah lingkungan.</p>
+          </div>
+          <div class="value-card">
+            <span class="value-card__icon" aria-hidden="true">🛵</span>
+            <h3 class="value-card__title">Pengiriman Tepat Waktu</h3>
+            <p class="value-card__desc">Armada pengiriman khusus Depok memastikan makananmu tiba hangat dan on-time.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONI -->
+    <section class="testimonials section section--alt" aria-labelledby="testi-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Kata Mereka</span>
+          <h2 id="testi-heading" class="section-title">Sudah Dicoba, Sudah Terbukti</h2>
+          <p class="section-desc">Dari sesi uji coba kami — ini yang mereka rasakan.</p>
+        </div>
+        <div class="testi-grid">
+          <blockquote class="testi-card">
+            <div class="testi-card__stars" aria-label="5 bintang">★★★★★</div>
+            <p class="testi-card__text">"Rasanya beneran kayak masakan rumah. Porsinya pas banget, tidak kekenyangan pas kerja sore-sorean."</p>
+            <footer class="testi-card__author">
+              <div class="testi-card__avatar" aria-hidden="true">D</div>
+              <div>
+                <cite class="testi-card__name">Dewi S.</cite>
+                <span class="testi-card__role">Karyawan Swasta, Beji</span>
+              </div>
+            </footer>
+          </blockquote>
+          <blockquote class="testi-card testi-card--featured">
+            <div class="testi-card__stars" aria-label="5 bintang">★★★★★</div>
+            <p class="testi-card__text">"Rendangnya juara! Empuk, bumbunya ngeresap. Saya langsung minta jadikan langganan pas launching nanti."</p>
+            <footer class="testi-card__author">
+              <div class="testi-card__avatar" aria-hidden="true">A</div>
+              <div>
+                <cite class="testi-card__name">Ahmad R.</cite>
+                <span class="testi-card__role">Pemilik UKM, Pancoran Mas</span>
+              </div>
+            </footer>
+          </blockquote>
+          <blockquote class="testi-card">
+            <div class="testi-card__stars" aria-label="5 bintang">★★★★★</div>
+            <p class="testi-card__text">"Saya pesan buat 10 orang tim kantor. Semua suka, tidak ada yang komplain. Harganya pun sangat masuk akal!"</p>
+            <footer class="testi-card__author">
+              <div class="testi-card__avatar" aria-hidden="true">R</div>
+              <div>
+                <cite class="testi-card__name">Rina M.</cite>
+                <span class="testi-card__role">HR Manager, Sukmajaya</span>
+              </div>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BAWAH -->
+    <section class="cta-bottom" aria-labelledby="cta-heading">
+      <div class="cta-bottom__bg-pattern" aria-hidden="true"></div>
+      <div class="container cta-bottom__inner">
+        <h2 id="cta-heading" class="cta-bottom__title">Jangan Sampai Ketinggalan!</h2>
+        <p class="cta-bottom__sub">Slot early bird terbatas. Daftar sekarang dan dapatkan diskon 20% untuk bulan pertama kamu.</p>
+        <a href="#form-top" class="btn btn--gold btn--lg">Daftar Sekarang — Gratis</a>
+        <p class="cta-bottom__note">Tidak ada kartu kredit. Tidak ada komitmen. Cuma makanan enak. 🍱</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="navbar__brand-text footer__brand-name">RANTANG<span class="accent">IN</span></span>
+        <p>Makan Siang Tanpa Ribet.<br/>Depok, Jawa Barat.</p>
+      </div>
+      <div class="footer__links">
+        <h3 class="footer__heading">Navigasi</h3>
+        <ul>
+          <li><a href="#cara-kerja">Cara Kerja</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#nilai">Keunggulan</a></li>
+          <li><a href="#form-top">Daftar Pre-Launch</a></li>
+        </ul>
+      </div>
+      <div class="footer__contact">
+        <h3 class="footer__heading">Hubungi Kami</h3>
+        <ul>
+          <li><a href="https://wa.me/6282xxxxxxxx" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a></li>
+          <li><a href="https://instagram.com/rantanginn" target="_blank" rel="noopener noreferrer">📷 @rantanginn</a></li>
+          <li><a href="mailto:halo@rantanginn.id">✉️ halo@rantanginn.id</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>© 2025 Rantanginn. Dibuat dengan ❤️ di Depok.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#form-top" class="back-to-top" id="backToTop" aria-label="Kembali ke atas">↑</a>
+
+  <script src="script.js"></script>
+</body>
+</html>
