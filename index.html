@@ -1,26 +1,80 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" itemscope itemtype="https://schema.org/Organization">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rantanginn – Segera Hadir! Daftar Lebih Dulu</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="logo png_2.png" />
-  <link rel="apple-touch-icon" href="logo png_2.png" />
+  <!-- ═══ SEO Meta ═══ -->
+  <title>Rantanginn | Healthy Home Cooking Catering (Coming Soon)</title>
+  <meta name="description" content="Daftar sekarang sebagai Early Access Member Rantanginn dan dapatkan promo launching eksklusif untuk 100 pelanggan pertama." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://rantanginn.com/" />
 
-  <!-- Fonts -->
+  <!-- ═══ Open Graph ═══ -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="Rantanginn | Healthy Home Cooking Catering (Coming Soon)" />
+  <meta property="og:description" content="Daftar sekarang sebagai Early Access Member Rantanginn dan dapatkan promo launching eksklusif untuk 100 pelanggan pertama." />
+  <meta property="og:url"         content="https://rantanginn.com/" />
+  <meta property="og:image"       content="https://rantanginn.com/og-image.jpg" />
+  <meta property="og:site_name"   content="Rantanginn" />
+  <meta property="og:locale"      content="id_ID" />
+
+  <!-- ═══ Twitter Card ═══ -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Rantanginn | Healthy Home Cooking Catering" />
+  <meta name="twitter:description" content="Daftar Early Access dan dapatkan promo launching eksklusif." />
+  <meta name="twitter:image"       content="https://rantanginn.com/og-image.jpg" />
+
+  <!-- ═══ Favicon ═══ -->
+  <link rel="icon"             type="image/png" sizes="32x32" href="logo png_2.png" />
+  <link rel="icon"             type="image/png" sizes="16x16" href="logo png_2.png" />
+  <link rel="apple-touch-icon" sizes="180x180"              href="logo png_2.png" />
+  <meta name="theme-color" content="#677333" />
+
+  <!-- ═══ Schema.org Organization + LocalBusiness ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "Rantanginn",
+        "url": "https://rantanginn.com",
+        "logo": "https://rantanginn.com/logo png_2.png",
+        "sameAs": ["https://www.instagram.com/rantanginn"],
+        "description": "Healthy online catering with home cooking concept. Same day delivery."
+      },
+      {
+        "@type": "FoodEstablishment",
+        "name": "Rantanginn",
+        "description": "Layanan katering online sehat dengan konsep masakan rumahan, dikirim hari yang sama.",
+        "url": "https://rantanginn.com",
+        "servesCuisine": "Indonesian",
+        "priceRange": "Rp50.000 – Rp60.000 / porsi",
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"]
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- ═══ Fonts ═══ -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-  <!-- ═══ #7 Google Analytics (GA4) — ganti G-XXXXXXXXXX ═══ -->
+  <!-- ═══ #7 Google Analytics 4 — ganti G-XXXXXXXXXX ═══ -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
+    gtag('config', 'G-XXXXXXXXXX', { send_page_view: true });
+    // page_view event
+    gtag('event', 'page_view', { page_title: document.title, page_location: window.location.href });
   </script>
 
   <!-- ═══ #7 Meta Pixel — ganti YOUR_PIXEL_ID ═══ -->
@@ -31,378 +85,765 @@
     t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
     (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', 'YOUR_PIXEL_ID');
-    fbq('track', 'PageView');
+    fbq('track', 'ViewContent');
   </script>
-  <noscript>
-    <img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1" alt="" />
-  </noscript>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=ViewContent&noscript=1" alt="" /></noscript>
 
   <!-- ═══ #7 Google Ads — ganti AW-XXXXXXXXXX ═══ -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXXX"></script>
-  <script>
-    gtag('config', 'AW-XXXXXXXXXX');
-  </script>
+  <script>gtag('config','AW-XXXXXXXXXX');</script>
 
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- ═══════════════════════════ NAVBAR ═══════════════════════════ -->
-  <header class="navbar">
-    <div class="container navbar__inner">
-      <img src="logo png_2.png" alt="Rantanginn" class="navbar__logo" />
-      <span class="coming-soon-pill">🚀 Segera Hadir</span>
-    </div>
-  </header>
+<!-- ═══════════════════════════ NAVBAR ═══════════════════════════ -->
+<header class="navbar" role="banner">
+  <div class="container navbar__inner">
+    <a href="#hero" class="navbar__brand" aria-label="Rantanginn Home">
+      <img src="logo png_2.png" alt="Rantanginn Logo" class="navbar__logo" width="40" height="40" loading="eager" />
+      <span class="navbar__name">Rantanginn</span>
+    </a>
+    <nav class="navbar__links" aria-label="Main navigation">
+      <a href="#problem">Masalah</a>
+      <a href="#solution">Solusi</a>
+      <a href="#pricing">Paket</a>
+      <a href="#menu">Menu</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a href="#hero" class="btn btn--cta navbar__cta" data-track="cta_click" data-label="navbar">Daftar Early Access</a>
+    <button class="navbar__burger" aria-label="Buka menu" aria-expanded="false" id="burgerBtn">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <!-- Mobile menu -->
+  <div class="navbar__mobile" id="mobileMenu" hidden>
+    <a href="#problem"  class="navbar__mobile-link">Masalah</a>
+    <a href="#solution" class="navbar__mobile-link">Solusi</a>
+    <a href="#pricing"  class="navbar__mobile-link">Paket</a>
+    <a href="#menu"     class="navbar__mobile-link">Menu</a>
+    <a href="#faq"      class="navbar__mobile-link">FAQ</a>
+    <a href="#hero" class="btn btn--cta btn--full" data-track="cta_click" data-label="navbar-mobile">Daftar Early Access</a>
+  </div>
+</header>
 
-  <!-- ═══════════════════════════════════════════════════════════════
-       HERO — Lead Form Above The Fold (#1 & #2)
-       ════════════════════════════════════════════════════════════ -->
-  <section class="hero" id="hero">
-    <div class="container hero__inner">
+<!-- ═══════════════════════════════════════════════════════════════
+     HERO — Lead Form Above The Fold
+     ════════════════════════════════════════════════════════════ -->
+<section class="hero" id="hero" aria-labelledby="heroHeadline">
+  <!-- Organic background blobs -->
+  <div class="hero__blob hero__blob--1" aria-hidden="true"></div>
+  <div class="hero__blob hero__blob--2" aria-hidden="true"></div>
 
-      <!-- LEFT: copy -->
-      <div class="hero__text">
-        <span class="badge">🍱 Coming Soon — Catering Harian Online</span>
-        <h1 class="hero__headline">
-          Masakan Rumahan <span class="highlight">Sehat &amp; Lezat</span><br />
-          Segera Diantar ke Pintumu.
-        </h1>
-        <p class="hero__sub">
-          Rantanginn <strong>belum resmi diluncurkan</strong> — tapi kamu bisa daftar sekarang
-          dan jadi yang pertama merasakan pengalaman catering terbaik.
-          Harga early bird spesial menanti!
-        </p>
-        <ul class="hero__bullets">
-          <li>✅ Masakan rumahan tradisional Indonesia</li>
-          <li>✅ Bahan segar, bebas pengawet</li>
-          <li>✅ Diantar tepat waktu setiap hari</li>
-        </ul>
-        <div class="hero__trust">
-          <span>👥</span>
-          <p><strong>200+ orang</strong> sudah mendaftar sebelum kamu</p>
-        </div>
+  <div class="container hero__inner">
+
+    <!-- LEFT: Copywriting -->
+    <div class="hero__copy">
+      <span class="badge badge--coming-soon">🥗 COMING SOON</span>
+
+      <h1 class="hero__headline" id="heroHeadline">
+        Makanan Rumahan Sehat yang Siap <span class="text-accent">Menghemat Waktu Anda,</span> Tanpa Mengorbankan Kualitas.
+      </h1>
+
+      <p class="hero__sub">
+        Rantanginn menghadirkan layanan online catering dengan menu sehat rumahan yang dimasak setiap hari tanpa bahan pengawet, dipantau oleh ahli gizi, dapat dipersonalisasi sesuai kebutuhan Anda, dan dikirim tepat waktu di hari yang sama.<br /><br />
+        Saat ini kami sedang membuka <strong>100 Early Access Member</strong> untuk mendapatkan penawaran spesial saat launching.
+      </p>
+
+      <!-- Floating benefit badges -->
+      <div class="hero__badges" aria-label="Keunggulan layanan">
+        <span class="hero__badge"><span aria-hidden="true">🥗</span> Healthy &amp; Fresh</span>
+        <span class="hero__badge"><span aria-hidden="true">🚚</span> Same Day Delivery</span>
+        <span class="hero__badge"><span aria-hidden="true">🍱</span> Home Cooking</span>
       </div>
 
-      <!-- RIGHT: Lead Form (above the fold, #1) -->
-      <div class="hero__form-wrap" id="heroFormWrap">
-        <div class="hero__form-header">
-          <p class="hero__form-eyebrow">🎉 Daftar Early Access — Gratis!</p>
-          <h2 class="hero__form-title">Amankan Tempatmu<br />Sekarang</h2>
-          <p class="hero__form-sub">
-            Isi nama dan Instagram kamu. Tim kami akan menghubungimu via DM
-            begitu Rantanginn resmi diluncurkan.
-          </p>
+      <!-- Social proof -->
+      <div class="hero__proof">
+        <div class="hero__avatars" aria-hidden="true">
+          <span class="avatar" style="background:#677333;">A</span>
+          <span class="avatar" style="background:#C35530;">B</span>
+          <span class="avatar" style="background:#F69520;">C</span>
+          <span class="avatar" style="background:#677333;">D</span>
         </div>
-
-        <form class="hero__form" id="orderForm" novalidate>
-          <!-- Nama (#2: only 2 fields) -->
-          <div class="form-group">
-            <label for="name">Nama Lengkap <span class="required">*</span></label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Contoh: Budi Santoso"
-              required
-              autocomplete="name"
-            />
-            <span class="form-error" id="nameError">Nama tidak boleh kosong.</span>
-          </div>
-
-          <!-- Instagram (#2: only 2 fields) -->
-          <div class="form-group">
-            <label for="instagram">Username Instagram <span class="required">*</span></label>
-            <div class="input-prefix-wrap">
-              <span class="input-prefix">@</span>
-              <input
-                type="text"
-                id="instagram"
-                name="instagram"
-                placeholder="username_kamu"
-                required
-                autocomplete="off"
-              />
-            </div>
-            <span class="form-error" id="igError">Username Instagram tidak boleh kosong.</span>
-          </div>
-
-          <button type="submit" class="btn btn--primary btn--full btn--lg" id="submitBtn">
-            <span class="btn-text">Daftar Early Access Sekarang 🍱</span>
-            <span class="btn-loading" hidden>Mengirim data kamu...</span>
-          </button>
-
-          <!-- #6 Privacy Policy link below form -->
-          <p class="form-disclaimer">
-            Dengan mendaftar, kamu menyetujui
-            <button type="button" class="privacy-link" id="openPrivacy">Kebijakan Privasi</button>
-            kami. Data kamu aman dan tidak akan disebar.
-          </p>
-        </form>
-
-        <!-- SUCCESS POPUP (#2: Thank You pop-up) -->
-        <div class="form-success" id="formSuccess" hidden>
-          <div class="form-success__icon">🎉</div>
-          <h3>Yeay! Kamu sudah terdaftar!</h3>
-          <p>Tim Rantanginn akan segera menghubungimu via Instagram DM
-            begitu kami resmi diluncurkan. Pantau terus ya!</p>
-          <a href="https://www.instagram.com/rantanginn"
-             target="_blank" rel="noopener noreferrer"
-             class="btn btn--primary">
-            Follow @rantanginn →
-          </a>
-        </div>
+        <p><strong>200+ orang</strong> sudah mendaftar sebelum kamu</p>
       </div>
 
-    </div>
-    <div class="hero__wave">
-      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#fdf6ee"/>
-      </svg>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════ KEUNGGULAN ═══════════════════════ -->
-  <section class="features" id="features">
-    <div class="container">
-      <div class="section-header">
-        <h2>Kenapa Harus Daftar <span class="highlight">Sekarang?</span></h2>
-        <p>Rantanginn dirancang untuk kamu yang ingin makan sehat tanpa repot — segera tersedia!</p>
-      </div>
-      <div class="features__grid">
-
-        <div class="feature-card">
-          <div class="feature-card__icon">
-            <img src="ICON_AFFORDABILITY.png" alt="Harga Terjangkau" />
-          </div>
-          <h3>Harga Terjangkau</h3>
-          <p>Makan enak setiap hari tidak harus mahal. Early bird dapat harga spesial!</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-card__icon">
-            <img src="ICON_FAST DELIVERY.png" alt="Pengiriman Cepat" />
-          </div>
-          <h3>Pengiriman Tepat Waktu</h3>
-          <p>Diantar sebelum jam makan siang, setiap hari tanpa kecuali.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-card__icon">
-            <img src="ICON_HOME COOKING.png" alt="Masakan Rumahan" />
-          </div>
-          <h3>Masakan Rumahan</h3>
-          <p>Resep tradisional Indonesia yang autentik, dimasak dengan cinta setiap hari.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-card__icon">
-            <img src="ICON_NATURAL FOOD.png" alt="Bahan Alami Segar" />
-          </div>
-          <h3>Bahan Alami &amp; Segar</h3>
-          <p>Dipilih langsung dari sumber terpercaya — segar, alami, bebas pengawet.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-card__icon">
-            <img src="ICON_PERSONALIZATION.png" alt="Personalisasi Menu" />
-          </div>
-          <h3>Menu Bisa Disesuaikan</h3>
-          <p>Preferensi makanan kamu diperhatikan. Tidak ada yang makan sembarangan.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-card__icon">
-            <img src="ICON_TIME EFFICIENCY.png" alt="Hemat Waktu" />
-          </div>
-          <h3>Hemat Waktu &amp; Tenaga</h3>
-          <p>Tidak perlu masak atau antri. Fokus pada pekerjaan dan hal yang kamu cintai.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════ PACKAGING ════════════════════════ -->
-  <section class="packaging">
-    <div class="container packaging__inner">
-      <div class="packaging__image">
-        <img src="PACKAGING.png" alt="Kemasan Rantanginn" />
-      </div>
-      <div class="packaging__text">
-        <span class="badge badge--orange">Kemasan Premium Eksklusif</span>
-        <h2>Rantang Cantik &amp; <span class="highlight">Fungsional</span> yang Belum Pernah Ada</h2>
-        <p>
-          Rantanginn hadir dengan kemasan rantang berlapis modern yang ramah lingkungan.
-          Tersedia dalam tiga warna ikonik — Sage Green, Butternut Orange, dan Ocean Blue.
-          <strong>Akan segera hadir</strong> untuk pelanggan early access pertama.
-        </p>
-        <ul class="packaging__perks">
-          <li>✅ Food-grade &amp; BPA Free</li>
-          <li>✅ Multi-layer untuk berbagai lauk</li>
-          <li>✅ Mudah dibawa, tidak tumpah</li>
-          <li>✅ Dapat dicuci &amp; dipakai ulang</li>
-        </ul>
-        <a href="#hero" class="btn btn--primary">Daftar Sekarang — Gratis →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════ HOW IT WORKS ═════════════════════ -->
-  <section class="how" id="how">
-    <div class="container">
-      <div class="section-header">
-        <h2>Begini Cara <span class="highlight">Kerjanya</span></h2>
-        <p>Proses dari daftar sampai makan hanya 3 langkah mudah.</p>
-      </div>
-      <div class="how__steps">
-        <div class="step">
-          <div class="step__number">01</div>
-          <h3>Daftar Sekarang</h3>
-          <p>Isi nama dan username Instagram kamu di form atas. Gratis, tidak ada komitmen.</p>
-        </div>
-        <div class="step__arrow">→</div>
-        <div class="step">
-          <div class="step__number">02</div>
-          <h3>Kami Hubungi via DM</h3>
-          <p>Saat Rantanginn resmi launch, kamu yang daftar pertama langsung kami kontak via Instagram.</p>
-        </div>
-        <div class="step__arrow">→</div>
-        <div class="step">
-          <div class="step__number">03</div>
-          <h3>Nikmati Makananmu</h3>
-          <p>Pilih menu, konfirmasi pesanan, dan rantangmu diantar tepat waktu setiap hari!</p>
+      <!-- Hero image below copy on desktop -->
+      <div class="hero__img-wrap" aria-hidden="true">
+        <img src="MODEL PIC_1.png" alt="Pelanggan menikmati Rantanginn" class="hero__img" loading="eager" width="560" height="360" />
+        <div class="hero__img-overlay">
+          <span class="img-badge img-badge--tl">🥗 Healthy &amp; Fresh</span>
+          <span class="img-badge img-badge--br">⭐ 4.9 / 5.0</span>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- ═══════════════════════════ SOCIAL PROOF ═════════════════════ -->
-  <section class="testimonials">
-    <div class="container">
-      <div class="section-header">
-        <h2>Kata Mereka yang <span class="highlight">Sudah Mencoba</span></h2>
-        <p>Beta tester kami sudah merasakan manfaatnya. Giliran kamu!</p>
-      </div>
-      <div class="testimonials__grid">
-        <div class="testi-card">
-          <div class="testi-card__stars">⭐⭐⭐⭐⭐</div>
-          <p>"Ikut beta test Rantanginn dan rasanya beneran kayak masak sendiri. Variasi menunya keren dan pengiriman selalu on time!"</p>
-          <div class="testi-card__author">
-            <div class="testi-card__avatar" style="background:#6b7c3f;">A</div>
-            <div>
-              <strong>Annisa R.</strong>
-              <span>@annisarahmadi_ · Beta Tester</span>
-            </div>
-          </div>
-        </div>
-        <div class="testi-card testi-card--featured">
-          <div class="testi-card__stars">⭐⭐⭐⭐⭐</div>
-          <p>"Rantangnya lucu banget dan porsinya pas! Kalau resmi launch, aku pasti langsung berlangganan. Worth it banget!"</p>
-          <div class="testi-card__author">
-            <div class="testi-card__avatar" style="background:#e07b39;">B</div>
-            <div>
-              <strong>Budi S.</strong>
-              <span>@budisantoso.id · Beta Tester</span>
-            </div>
-          </div>
-        </div>
-        <div class="testi-card">
-          <div class="testi-card__stars">⭐⭐⭐⭐⭐</div>
-          <p>"Konsepnya brilian untuk WFH-er kayak aku. Ga perlu repot masak, tinggal tunggu dianter. Ditunggu launchnya!"</p>
-          <div class="testi-card__author">
-            <div class="testi-card__avatar" style="background:#6b7c3f;">C</div>
-            <div>
-              <strong>Clara M.</strong>
-              <span>@clarameilani · Beta Tester</span>
-            </div>
-          </div>
+    <!-- RIGHT: Lead Form Card -->
+    <div class="hero__form-card" id="leadForm">
+      <!-- Promo banner above form -->
+      <div class="promo-banner" role="note">
+        <span class="promo-banner__icon" aria-hidden="true">🎉</span>
+        <div>
+          <p class="promo-banner__title">Dapatkan Harga Spesial untuk 100 Pendaftar Pertama Setelah Launching!</p>
+          <p class="promo-banner__discount">Diskon hingga <strong>Rp100.000</strong></p>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- ═══════════════════════════ SECOND CTA ═══════════════════════ -->
-  <section class="second-cta">
-    <div class="container second-cta__inner">
-      <div class="second-cta__text">
-        <h2>Jangan Ketinggalan <span class="highlight">Early Access!</span></h2>
-        <p>Slot early bird terbatas. Daftar sekarang dan dapatkan notifikasi pertama saat Rantanginn resmi diluncurkan.</p>
+      <div class="form-card__header">
+        <p class="form-card__eyebrow">🎯 Daftar Early Access — 100% Gratis</p>
+        <h2 class="form-card__title">Amankan Tempatmu<br />Sebelum Kehabisan</h2>
+        <p class="form-card__sub">Isi nama dan Instagram kamu. Kami akan menghubungi via DM saat Rantanginn resmi diluncurkan.</p>
       </div>
-      <a href="#hero" class="btn btn--primary btn--lg">Daftar Sekarang — Gratis →</a>
-    </div>
-  </section>
 
-  <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
-  <footer class="footer">
-    <div class="container footer__inner">
-      <div class="footer__brand">
-        <img src="logo png_2.png" alt="Rantanginn" class="footer__logo" />
-        <p>Masakan rumahan yang sehat, lezat, dan diantar tepat waktu.<br />
-           <em>Segera hadir untuk kamu.</em></p>
-        <a href="https://www.instagram.com/rantanginn"
-           target="_blank" rel="noopener noreferrer" class="footer__ig">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-          </svg>
-          @rantanginn
-        </a>
+      <!-- Slot counter -->
+      <div class="slot-counter" aria-live="polite">
+        <div class="slot-counter__bar">
+          <div class="slot-counter__fill" style="width:72%"></div>
+        </div>
+        <p class="slot-counter__label"><strong>72 dari 100 slot</strong> sudah terisi</p>
       </div>
-      <div class="footer__links">
-        <h4>Navigasi</h4>
-        <ul>
-          <li><a href="#hero">Daftar Early Access</a></li>
-          <li><a href="#features">Keunggulan</a></li>
-          <li><a href="#how">Cara Kerja</a></li>
-        </ul>
-      </div>
-      <div class="footer__contact">
-        <h4>Hubungi Kami</h4>
-        <p>Instagram DM:<br />
-          <a href="https://www.instagram.com/rantanginn"
-             target="_blank" rel="noopener noreferrer">@rantanginn</a>
-        </p>
-        <button type="button" class="privacy-link footer__privacy" id="openPrivacy2">
-          Kebijakan Privasi
+
+      <form class="lead-form" id="orderForm" novalidate aria-label="Formulir Early Access">
+        <div class="form-group">
+          <label for="name">Nama Lengkap <span class="required" aria-label="wajib diisi">*</span></label>
+          <input type="text" id="name" name="name" placeholder="Contoh: Budi Santoso"
+                 required autocomplete="name" aria-describedby="nameError" />
+          <span class="form-error" id="nameError" role="alert">Nama tidak boleh kosong.</span>
+        </div>
+
+        <div class="form-group">
+          <label for="instagram">Username Instagram <span class="required" aria-label="wajib diisi">*</span></label>
+          <div class="input-prefix-wrap">
+            <span class="input-prefix" aria-hidden="true">@</span>
+            <input type="text" id="instagram" name="instagram" placeholder="username_kamu"
+                   required autocomplete="off" aria-describedby="igError" />
+          </div>
+          <span class="form-error" id="igError" role="alert">Username Instagram tidak boleh kosong.</span>
+        </div>
+
+        <button type="submit" class="btn btn--cta btn--full btn--lg" id="submitBtn"
+                data-track="form_submit" aria-label="Submit formulir early access">
+          <span class="btn-text">Saya Mau Jadi Early Member 🍱</span>
+          <span class="btn-loading" hidden aria-live="polite">Mendaftarkan kamu...</span>
         </button>
+
+        <!-- Privacy Policy below form -->
+        <p class="form-privacy">
+          Kami hanya menggunakan data Anda untuk memberikan informasi mengenai peluncuran Rantanginn.
+          Data tidak akan dibagikan kepada pihak lain.
+          <button type="button" class="privacy-trigger" id="openPrivacy" aria-haspopup="dialog">Kebijakan Privasi</button>
+        </p>
+      </form>
+
+      <!-- Success state (replaces form after submit) -->
+      <div class="form-success" id="formSuccess" hidden role="status" aria-live="polite">
+        <div class="form-success__icon" aria-hidden="true">🎉</div>
+        <h3>Terima Kasih!</h3>
+        <p>Anda berhasil masuk ke daftar Early Access Rantanginn.<br />Kami akan menghubungi Anda saat layanan resmi dibuka.</p>
+        <button class="btn btn--outline" id="closeSuccessBtn">Tutup</button>
       </div>
     </div>
-    <div class="footer__bottom">
-      <div class="container">
-        <p>© 2024 Rantanginn. All rights reserved. — Segera Hadir.</p>
-      </div>
+
+  </div><!-- /.hero__inner -->
+
+  <div class="hero__wave" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#faf7f2"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ PROBLEM SECTION ═══════════════════════════ -->
+<section class="section section--light" id="problem" aria-labelledby="problemTitle">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Kenyataan Sehari-hari</span>
+      <h2 id="problemTitle">Apakah Anda Mengalami Hal Ini?</h2>
+      <p>Jutaan orang menghadapi tantangan makan sehat setiap hari. Anda tidak sendirian.</p>
     </div>
-  </footer>
-
-  <!-- ═══════════════════════════════════════════════════════════════
-       #6 PRIVACY POLICY POPUP
-       ════════════════════════════════════════════════════════════ -->
-  <div class="modal-overlay" id="privacyModal" role="dialog" aria-modal="true" aria-labelledby="privacyTitle" hidden>
-    <div class="modal">
-      <button class="modal__close" id="closePrivacy" aria-label="Tutup">&times;</button>
-      <h2 id="privacyTitle">Kebijakan Privasi</h2>
-      <p class="modal__date">Terakhir diperbarui: Juli 2024</p>
-      <div class="modal__body">
-        <h3>1. Data yang Kami Kumpulkan</h3>
-        <p>Kami hanya mengumpulkan dua data: <strong>Nama Lengkap</strong> dan <strong>Username Instagram</strong> kamu. Tidak ada data sensitif lain yang diminta.</p>
-
-        <h3>2. Bagaimana Data Digunakan</h3>
-        <p>Data kamu digunakan semata-mata untuk menghubungi kamu via Instagram DM saat Rantanginn resmi diluncurkan dan memberikan penawaran early access.</p>
-
-        <h3>3. Penyimpanan Data</h3>
-        <p>Data disimpan secara aman di Google Sheets yang terproteksi dan hanya dapat diakses oleh tim internal Rantanginn.</p>
-
-        <h3>4. Tidak Dijual ke Pihak Ketiga</h3>
-        <p>Kami tidak akan menjual, menyewakan, atau membagikan data kamu kepada pihak ketiga manapun tanpa izin eksplisit kamu.</p>
-
-        <h3>5. Hak Kamu</h3>
-        <p>Kamu berhak meminta penghapusan data kapan saja dengan menghubungi kami via Instagram <a href="https://www.instagram.com/rantanginn" target="_blank" rel="noopener noreferrer">@rantanginn</a>.</p>
+    <div class="problem__grid">
+      <div class="problem-card">
+        <div class="problem-card__icon" aria-hidden="true">⏰</div>
+        <h3>Waktu Makan Terlewat</h3>
+        <p>Sering melewatkan waktu makan karena terlalu sibuk bekerja atau berkuliah sepanjang hari.</p>
       </div>
-      <button class="btn btn--primary btn--full" id="closePrivacyBtn">Saya Mengerti</button>
+      <div class="problem-card">
+        <div class="problem-card__icon" aria-hidden="true">🍟</div>
+        <h3>Makanan Tidak Sehat</h3>
+        <p>Bosan dengan makanan instan atau pesan makanan yang kurang sehat dan kurang bergizi.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-card__icon" aria-hidden="true">🍳</div>
+        <h3>Tidak Sempat Masak</h3>
+        <p>Ingin makan sehat tetapi tidak punya waktu dan tenaga untuk memasak sendiri setiap hari.</p>
+      </div>
     </div>
   </div>
+</section>
 
-  <script src="script.js"></script>
+<!-- ═══════════════════════════ SOLUTION SECTION ═══════════════════════════ -->
+<section class="section section--white" id="solution" aria-labelledby="solutionTitle">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Kenapa Rantanginn</span>
+      <h2 id="solutionTitle">Rantanginn Hadir Menjadi Solusinya</h2>
+      <p>Dirancang khusus untuk kamu yang ingin makan sehat tanpa repot — cukup daftar, dan kami yang urus sisanya.</p>
+    </div>
+    <div class="solution__grid">
+      <div class="solution-card">
+        <div class="solution-card__icon">
+          <img src="ICON_HOME COOKING.png" alt="" aria-hidden="true" loading="lazy" width="48" height="48" />
+        </div>
+        <h3>🥗 Healthy Home Cooking</h3>
+        <p>Menu sehat dimasak setiap hari tanpa bahan pengawet menggunakan bahan segar pilihan, dipantau ahli gizi.</p>
+      </div>
+      <div class="solution-card">
+        <div class="solution-card__icon">
+          <img src="ICON_FAST DELIVERY.png" alt="" aria-hidden="true" loading="lazy" width="48" height="48" />
+        </div>
+        <h3>🚚 Same Day Delivery</h3>
+        <p>Pesan hari ini, dikirim hari ini. Makanan segar tiba tepat sebelum jam makan siang Anda.</p>
+      </div>
+      <div class="solution-card">
+        <div class="solution-card__icon">
+          <img src="ICON_PERSONALIZATION.png" alt="" aria-hidden="true" loading="lazy" width="48" height="48" />
+        </div>
+        <h3>🍱 Personalized Menu</h3>
+        <p>Sesuaikan menu dengan preferensi, alergi, dan kebutuhan gizi harian Anda. Tidak ada yang makan sembarangan.</p>
+      </div>
+      <div class="solution-card">
+        <div class="solution-card__icon">
+          <img src="ICON_AFFORDABILITY.png" alt="" aria-hidden="true" loading="lazy" width="48" height="48" />
+        </div>
+        <h3>💰 Harga Terjangkau</h3>
+        <p>Mulai dari Rp50.000/porsi — lebih hemat dari makan di luar, dengan kualitas masakan rumahan premium.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ BENEFIT SECTION ═══════════════════════════ -->
+<section class="section section--beige" id="benefit" aria-labelledby="benefitTitle">
+  <div class="container">
+    <div class="benefit__inner">
+      <div class="benefit__image">
+        <img src="PACKAGING.png" alt="Kemasan premium Rantanginn" loading="lazy" width="520" height="420" />
+      </div>
+      <div class="benefit__content">
+        <span class="section-eyebrow">Keunggulan Kami</span>
+        <h2 id="benefitTitle">Kenapa Memilih Rantanginn?</h2>
+        <p class="benefit__lead">Lebih dari sekadar katering biasa — Rantanginn adalah partner makan sehat harian Anda.</p>
+        <ul class="benefit__list" aria-label="Daftar keunggulan Rantanginn">
+          <li>
+            <img src="ICON_NATURAL FOOD.png" alt="" aria-hidden="true" loading="lazy" width="28" height="28" />
+            <div><strong>Tanpa Pengawet</strong><p>Semua dimasak segar setiap hari, bebas bahan pengawet.</p></div>
+          </li>
+          <li>
+            <img src="ICON_TIME EFFICIENCY.png" alt="" aria-hidden="true" loading="lazy" width="28" height="28" />
+            <div><strong>Menu Berbeda Setiap Hari</strong><p>Tidak monoton — menu berganti setiap hari agar Anda tidak bosan.</p></div>
+          </li>
+          <li>
+            <img src="ICON_AFFORDABILITY.png" alt="" aria-hidden="true" loading="lazy" width="28" height="28" />
+            <div><strong>Harga Ramah Mahasiswa</strong><p>Mulai Rp50.000/porsi, makan sehat bukan lagi kemewahan.</p></div>
+          </li>
+          <li>
+            <img src="ICON_HOME COOKING.png" alt="" aria-hidden="true" loading="lazy" width="28" height="28" />
+            <div><strong>Home Cooking Quality</strong><p>Rasa seperti masakan rumah — hangat, autentik, penuh kasih sayang.</p></div>
+          </li>
+          <li>
+            <img src="ICON_FAST DELIVERY.png" alt="" aria-hidden="true" loading="lazy" width="28" height="28" />
+            <div><strong>Tepat Waktu, Setiap Hari</strong><p>Pengiriman terstruktur agar makanan selalu tiba on time.</p></div>
+          </li>
+          <li>
+            <img src="ICON_PERSONALIZATION.png" alt="" aria-hidden="true" loading="lazy" width="28" height="28" />
+            <div><strong>Bisa Custom Menu</strong><p>Punya pantangan atau alergi? Kami siap menyesuaikan untuk Anda.</p></div>
+          </li>
+        </ul>
+        <a href="#leadForm" class="btn btn--cta" data-track="cta_click" data-label="benefit">
+          Daftar Early Access Sekarang →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ HOW IT WORKS ═══════════════════════════ -->
+<section class="section section--white" id="how" aria-labelledby="howTitle">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Proses Mudah</span>
+      <h2 id="howTitle">Cara Kerjanya</h2>
+      <p>Hanya 3 langkah dari daftar hingga menikmati makanan sehat setiap hari.</p>
+    </div>
+    <div class="how__timeline">
+      <div class="how-step">
+        <div class="how-step__num" aria-hidden="true">1</div>
+        <div class="how-step__body">
+          <h3>Daftar Early Access</h3>
+          <p>Isi nama dan username Instagram kamu di form di atas. Gratis, tanpa komitmen apapun.</p>
+        </div>
+      </div>
+      <div class="how__arrow" aria-hidden="true">
+        <svg width="40" height="16" viewBox="0 0 40 16" fill="none"><path d="M0 8h36m0 0-7-7m7 7-7 7" stroke="#677333" stroke-width="2" stroke-linecap="round"/></svg>
+      </div>
+      <div class="how-step">
+        <div class="how-step__num" aria-hidden="true">2</div>
+        <div class="how-step__body">
+          <h3>Kami Hubungi Saat Launch</h3>
+          <p>Tim Rantanginn menghubungimu via Instagram DM dengan info lengkap dan penawaran eksklusif early member.</p>
+        </div>
+      </div>
+      <div class="how__arrow" aria-hidden="true">
+        <svg width="40" height="16" viewBox="0 0 40 16" fill="none"><path d="M0 8h36m0 0-7-7m7 7-7 7" stroke="#677333" stroke-width="2" stroke-linecap="round"/></svg>
+      </div>
+      <div class="how-step">
+        <div class="how-step__num" aria-hidden="true">3</div>
+        <div class="how-step__body">
+          <h3>Nikmati Catering Sehat</h3>
+          <p>Pilih paket, konfirmasi menu, dan rantangmu diantar tepat waktu setiap hari!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ PRICING SECTION ═══════════════════════════ -->
+<section class="section section--beige" id="pricing" aria-labelledby="pricingTitle">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Paket Catering</span>
+      <h2 id="pricingTitle">Pilih Paket Catering yang Sesuai dengan Kebutuhan Anda</h2>
+      <p>Pilihan paket fleksibel untuk individu maupun keluarga, seluruh menu dimasak setiap hari menggunakan bahan segar tanpa pengawet.</p>
+    </div>
+    <div class="pricing__grid">
+
+      <!-- Card 1 -->
+      <div class="pricing-card">
+        <div class="pricing-card__badge badge--starter">Starter</div>
+        <h3 class="pricing-card__name">Bundling Mingguan</h3>
+        <div class="pricing-card__detail">
+          <span>1 Pax / Hari</span><span>·</span><span>5 Hari</span>
+        </div>
+        <div class="pricing-card__price">
+          <span class="price-per">Rp60.000<small>/pax</small></span>
+          <span class="price-total">Total <strong>Rp300.000</strong></span>
+        </div>
+        <ul class="pricing-card__benefits">
+          <li>✔ Cocok untuk mencoba layanan</li>
+          <li>✔ Menu berganti setiap hari</li>
+          <li>✔ Same Day Delivery</li>
+        </ul>
+        <a href="#leadForm" class="btn btn--outline-green btn--full" data-track="cta_click" data-label="pricing-1">
+          Daftar Early Access
+        </a>
+      </div>
+
+      <!-- Card 2 — FEATURED -->
+      <div class="pricing-card pricing-card--featured">
+        <div class="pricing-card__badge badge--popular">🔥 Paling Hemat</div>
+        <h3 class="pricing-card__name">Bundling Bulanan</h3>
+        <div class="pricing-card__detail">
+          <span>1 Pax / Hari</span><span>·</span><span>20 Hari</span>
+        </div>
+        <div class="pricing-card__price">
+          <span class="price-per">Rp57.000<small>/pax</small></span>
+          <span class="price-total">Total <strong>Rp1.140.000</strong></span>
+        </div>
+        <ul class="pricing-card__benefits">
+          <li>✔ Lebih hemat</li>
+          <li>✔ Prioritas pengiriman</li>
+          <li>✔ Menu lebih variatif</li>
+          <li>✔ Personalized Menu</li>
+        </ul>
+        <a href="#leadForm" class="btn btn--cta btn--full" data-track="cta_click" data-label="pricing-2">
+          Daftar Early Access
+        </a>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="pricing-card">
+        <h3 class="pricing-card__name">Bundling Mingguan</h3>
+        <div class="pricing-card__detail">
+          <span>2 Pax / Hari</span><span>·</span><span>5 Hari</span>
+        </div>
+        <div class="pricing-card__price">
+          <span class="price-per">Rp55.000<small>/pax</small></span>
+          <span class="price-total">Total <strong>Rp550.000</strong></span>
+        </div>
+        <ul class="pricing-card__benefits">
+          <li>✔ Cocok untuk pasangan</li>
+          <li>✔ Lebih hemat dibanding beli satuan</li>
+          <li>✔ Menu berganti setiap hari</li>
+        </ul>
+        <a href="#leadForm" class="btn btn--outline-green btn--full" data-track="cta_click" data-label="pricing-3">
+          Daftar Early Access
+        </a>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="pricing-card">
+        <div class="pricing-card__badge badge--value">Best Value</div>
+        <h3 class="pricing-card__name">Bundling Bulanan</h3>
+        <div class="pricing-card__detail">
+          <span>2 Pax / Hari</span><span>·</span><span>20 Hari</span>
+        </div>
+        <div class="pricing-card__price">
+          <span class="price-per">Rp50.000<small>/pax</small></span>
+          <span class="price-total">Total <strong>Rp2.000.000</strong></span>
+        </div>
+        <ul class="pricing-card__benefits">
+          <li>✔ Harga terbaik</li>
+          <li>✔ Cocok keluarga kecil</li>
+          <li>✔ Personalized Menu</li>
+          <li>✔ Prioritas Delivery</li>
+        </ul>
+        <a href="#leadForm" class="btn btn--outline-green btn--full" data-track="cta_click" data-label="pricing-4">
+          Daftar Early Access
+        </a>
+      </div>
+
+    </div><!-- /.pricing__grid -->
+
+    <!-- Add-On -->
+    <div class="addon__section">
+      <h3 class="addon__title">Add-On Menu</h3>
+      <div class="addon__grid">
+        <div class="addon-card">
+          <div class="addon-card__info">
+            <h4>Additional Weekend Menu</h4>
+            <p>Tambahkan menu spesial untuk akhir pekan.</p>
+          </div>
+          <div class="addon-card__price">Rp60.000<small>/pax</small></div>
+        </div>
+        <div class="addon-card">
+          <div class="addon-card__info">
+            <h4>Custom Menu</h4>
+            <p>Tambahkan menu khusus sesuai kebutuhan diet atau preferensi Anda.</p>
+          </div>
+          <div class="addon-card__price">Mulai Rp20.000<small>/pax</small></div>
+        </div>
+      </div>
+      <p class="pricing__disclaimer">*Harga promo launching dapat berubah setelah bisnis resmi beroperasi.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════ MENU PREVIEW ═══════════════════════════ -->
+<section class="section section--white" id="menu" aria-labelledby="menuTitle">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Pilihan Menu</span>
+      <h2 id="menuTitle">Menu Favorit</h2>
+      <p>Dimasak setiap hari dari bahan segar — lezat, bergizi, dan terasa seperti masakan rumah.</p>
+    </div>
+    <div class="menu__grid">
+
+      <article class="menu-card">
+        <div class="menu-card__img-wrap">
+          <img src="MODEL PIC_2.png" alt="Nasi Padang Sehat" loading="lazy" width="360" height="220" />
+          <span class="menu-card__badge badge--bestseller">Best Seller</span>
+        </div>
+        <div class="menu-card__body">
+          <span class="menu-card__category">Best Seller</span>
+          <h3>Nasi Padang</h3>
+          <p>Rendang dimasak tanpa santan menggunakan fiber creme, baked telur dadar omega-3, sayur daun singkong creamy rendah lemak, dan sambal hijau khas Padang.</p>
+        </div>
+      </article>
+
+      <article class="menu-card">
+        <div class="menu-card__img-wrap">
+          <img src="MODEL PIC_3.png" alt="Ayam Bakar Madu Sehat" loading="lazy" width="360" height="220" />
+          <span class="menu-card__badge badge--healthy">Healthy Choice</span>
+        </div>
+        <div class="menu-card__body">
+          <span class="menu-card__category">Healthy Choice</span>
+          <h3>Ayam Bakar Madu Sehat</h3>
+          <p>Ayam bakar berbumbu rempah dengan sentuhan madu yang manis gurih, disajikan bersama sayuran segar untuk hidangan yang lezat dan seimbang.</p>
+        </div>
+      </article>
+
+      <article class="menu-card">
+        <div class="menu-card__img-wrap">
+          <img src="MODEL PIC_4.png" alt="Beef Black Pepper" loading="lazy" width="360" height="220" />
+          <span class="menu-card__badge badge--protein">High Protein</span>
+        </div>
+        <div class="menu-card__body">
+          <span class="menu-card__category">High Protein</span>
+          <h3>Beef Black Pepper</h3>
+          <p>Irisan daging sapi premium dengan saus lada hitam yang kaya rasa, dipadukan dengan paprika dan sayuran segar.</p>
+        </div>
+      </article>
+
+      <article class="menu-card">
+        <div class="menu-card__img-wrap">
+          <img src="MODEL PIC_5.png" alt="Capcay Ayam" loading="lazy" width="360" height="220" />
+          <span class="menu-card__badge badge--lowcal">Low Calorie</span>
+        </div>
+        <div class="menu-card__body">
+          <span class="menu-card__category">Low Calorie</span>
+          <h3>Capcay Ayam</h3>
+          <p>Sayuran segar dengan ayam rebus dan saus rendah garam. Ringan, bergizi, sempurna untuk diet sehat.</p>
+        </div>
+      </article>
+
+      <article class="menu-card">
+        <div class="menu-card__img-wrap">
+          <img src="MODEL PIC_6.png" alt="Ayam Rica-Rica" loading="lazy" width="360" height="220" />
+          <span class="menu-card__badge badge--spicy">Spicy Favorite</span>
+        </div>
+        <div class="menu-card__body">
+          <span class="menu-card__category">Spicy Favorite</span>
+          <h3>Ayam Rica-Rica</h3>
+          <p>Ayam rica khas Manado dengan tumis sayur dan nasi hangat. Pedas, segar, dan menggugah selera.</p>
+        </div>
+      </article>
+
+      <article class="menu-card menu-card--cta">
+        <div class="menu-card__more">
+          <span class="menu-card__more-icon" aria-hidden="true">🍽️</span>
+          <h3>+20 Menu Lainnya</h3>
+          <p>Temukan pilihan menu lengkap saat kamu bergabung sebagai early member!</p>
+          <a href="#leadForm" class="btn btn--cta" data-track="cta_click" data-label="menu-more">
+            Lihat Semua Menu →
+          </a>
+        </div>
+      </article>
+
+    </div><!-- /.menu__grid -->
+
+    <div class="menu__bottom-cta">
+      <h3>Belum Menemukan Menu Favorit Anda?</h3>
+      <p>Saat launching nanti, pelanggan Early Access dapat memberikan masukan terhadap menu yang ingin tersedia di Rantanginn.</p>
+      <a href="#leadForm" class="btn btn--cta btn--lg" data-track="cta_click" data-label="menu-cta">
+        Daftar sebagai Early Access Member
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ SOCIAL PROOF / EARLY ACCESS WHY ═══════════════════ -->
+<section class="section section--green" id="social-proof" aria-labelledby="proofTitle">
+  <div class="container">
+    <div class="section-header section-header--light">
+      <span class="section-eyebrow section-eyebrow--light">Kenapa Sekarang?</span>
+      <h2 id="proofTitle">Mengapa Kami Membuka Early Access?</h2>
+      <p>Kami ingin memastikan layanan kami benar-benar sesuai dengan kebutuhan pelanggan sebelum resmi diluncurkan.</p>
+    </div>
+    <div class="proof__grid">
+      <div class="proof-card">
+        <div class="proof-card__icon" aria-hidden="true">🎁</div>
+        <h3>Promo Launching Eksklusif</h3>
+        <p>Diskon hingga Rp100.000 khusus 100 pendaftar pertama yang bergabung sebelum bisnis resmi buka.</p>
+      </div>
+      <div class="proof-card">
+        <div class="proof-card__icon" aria-hidden="true">⚡</div>
+        <h3>Prioritas Pemesanan</h3>
+        <p>Early member mendapatkan slot pengiriman prioritas dan tidak perlu antri saat layanan resmi dibuka.</p>
+      </div>
+      <div class="proof-card">
+        <div class="proof-card__icon" aria-hidden="true">💬</div>
+        <h3>Suaramu Membentuk Produk</h3>
+        <p>Kesempatan langsung memberikan masukan terhadap menu, paket, dan layanan sebelum resmi diluncurkan.</p>
+      </div>
+    </div>
+    <!-- Model photo -->
+    <div class="proof__team">
+      <img src="MODEL PIC_7.png" alt="Tim Rantanginn bersama pelanggan" loading="lazy" width="900" height="400" />
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ FAQ SECTION ═══════════════════════════ -->
+<section class="section section--light" id="faq" aria-labelledby="faqTitle">
+  <div class="container faq__container">
+    <div class="section-header">
+      <span class="section-eyebrow">Pertanyaan Umum</span>
+      <h2 id="faqTitle">Ada Pertanyaan?</h2>
+      <p>Temukan jawaban atas pertanyaan yang paling sering ditanyakan.</p>
+    </div>
+    <div class="faq__list" role="list">
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-item__q" aria-expanded="false" aria-controls="faq1">
+          Apakah sudah bisa langsung order sekarang?
+          <span class="faq-item__icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-item__a" id="faq1" hidden>
+          <p>Belum. Saat ini Rantanginn masih dalam tahap validasi bisnis dan akan segera diluncurkan. Dengan mendaftar sekarang, Anda akan menjadi yang pertama dihubungi saat kami siap beroperasi dan mendapatkan promo eksklusif.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-item__q" aria-expanded="false" aria-controls="faq2">
+          Kapan Rantanginn resmi launching?
+          <span class="faq-item__icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-item__a" id="faq2" hidden>
+          <p>Kami sedang mempersiapkan peluncuran resmi dalam waktu dekat. Semua pendaftar early access akan mendapatkan notifikasi pertama via Instagram DM sebelum kami mengumumkan ke publik.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-item__q" aria-expanded="false" aria-controls="faq3">
+          Apakah menu bisa disesuaikan (custom)?
+          <span class="faq-item__icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-item__a" id="faq3" hidden>
+          <p>Ya! Rantanginn mendukung personalisasi menu sesuai preferensi, pantangan makanan, dan kebutuhan gizi Anda. Pelanggan early access akan mendapatkan prioritas untuk layanan custom menu ini.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-item__q" aria-expanded="false" aria-controls="faq4">
+          Apakah tersedia paket langganan mingguan?
+          <span class="faq-item__icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-item__a" id="faq4" hidden>
+          <p>Ya, tersedia paket Bundling Mingguan (5 hari) dan Bundling Bulanan (20 hari) untuk 1 maupun 2 porsi per hari. Lihat detail paket di bagian atas halaman ini.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-item__q" aria-expanded="false" aria-controls="faq5">
+          Bagaimana sistem pengirimannya?
+          <span class="faq-item__icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-item__a" id="faq5" hidden>
+          <p>Rantanginn menggunakan sistem same-day delivery — pesan hari ini, dikirim hari ini sebelum jam makan siang. Area pengiriman akan diumumkan lebih detail saat launching.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-item__q" aria-expanded="false" aria-controls="faq6">
+          Apakah menu dipantau oleh ahli gizi?
+          <span class="faq-item__icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-item__a" id="faq6" hidden>
+          <p>Ya. Seluruh menu Rantanginn dirancang dan dipantau oleh ahli gizi bersertifikat untuk memastikan keseimbangan nutrisi harian yang optimal bagi pelanggan kami.</p>
+        </div>
+      </div>
+
+    </div><!-- /.faq__list -->
+  </div>
+</section>
+
+<!-- ═══════════════════════════ CLOSING CTA ═══════════════════════════ -->
+<section class="section section--cta-closing" id="cta-closing" aria-labelledby="ctaTitle">
+  <div class="container">
+    <div class="cta-closing__inner">
+      <span class="section-eyebrow section-eyebrow--light">Jangan Lewatkan</span>
+      <h2 id="ctaTitle">Siap Menjadi 100 Pelanggan Pertama Rantanginn?</h2>
+      <p>Daftar sekarang dan nikmati promo launching eksklusif — diskon hingga Rp100.000 untuk early member.</p>
+      <a href="#leadForm" class="btn btn--white btn--lg" data-track="cta_click" data-label="closing-cta">
+        Daftar Sekarang →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+<footer class="footer" role="contentinfo">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <a href="#hero" aria-label="Kembali ke atas">
+        <img src="logo png_2.png" alt="Rantanginn" class="footer__logo" loading="lazy" width="48" height="48" />
+      </a>
+      <p class="footer__tagline">"A Rantang Made for Your Health Journey."</p>
+      <p class="footer__desc">Healthy online catering dengan konsep masakan rumahan. Segera hadir untuk kamu.</p>
+    </div>
+    <nav class="footer__nav" aria-label="Footer navigation">
+      <h4>Menu</h4>
+      <ul>
+        <li><a href="#hero">Beranda</a></li>
+        <li><a href="#problem">Masalah</a></li>
+        <li><a href="#solution">Solusi</a></li>
+        <li><a href="#pricing">Paket</a></li>
+        <li><a href="#menu">Menu Preview</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+    <div class="footer__contact">
+      <h4>Hubungi Kami</h4>
+      <ul>
+        <li>
+          <a href="https://www.instagram.com/rantanginn" target="_blank" rel="noopener noreferrer" aria-label="Instagram Rantanginn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            @rantanginn
+          </a>
+        </li>
+        <li>
+          <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Rantanginn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp
+          </a>
+        </li>
+        <li>
+          <a href="mailto:hello@rantanginn.com" aria-label="Email Rantanginn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            hello@rantanginn.com
+          </a>
+        </li>
+      </ul>
+      <button type="button" class="privacy-trigger footer__privacy-link" id="openPrivacy2">
+        Kebijakan Privasi
+      </button>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container">
+      <p>© 2024 Rantanginn. All rights reserved. — <em>Segera Hadir.</em></p>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════ PRIVACY POLICY MODAL ═══════════════════════════ -->
+<div class="modal-overlay" id="privacyModal" role="dialog" aria-modal="true"
+     aria-labelledby="privacyTitle" hidden>
+  <div class="modal">
+    <button class="modal__close" id="closePrivacyX" aria-label="Tutup modal">&times;</button>
+    <div class="modal__logo">
+      <img src="logo png_2.png" alt="Rantanginn" width="48" height="48" loading="lazy" />
+      <span>Rantanginn</span>
+    </div>
+    <h2 id="privacyTitle">Kebijakan Privasi</h2>
+    <p class="modal__date">Terakhir diperbarui: Juli 2024</p>
+    <div class="modal__body">
+      <h3>1. Data yang Kami Kumpulkan</h3>
+      <p>Kami hanya mengumpulkan dua data: <strong>Nama Lengkap</strong> dan <strong>Username Instagram</strong>. Tidak ada data sensitif lain yang diminta.</p>
+      <h3>2. Bagaimana Data Digunakan</h3>
+      <p>Data Anda digunakan semata-mata untuk menghubungi Anda via Instagram DM saat Rantanginn resmi diluncurkan dan memberikan penawaran early access eksklusif.</p>
+      <h3>3. Penyimpanan Data</h3>
+      <p>Data disimpan secara aman di Google Sheets yang terproteksi dan hanya dapat diakses oleh tim internal Rantanginn.</p>
+      <h3>4. Tidak Dijual ke Pihak Ketiga</h3>
+      <p>Kami tidak akan menjual, menyewakan, atau membagikan data Anda kepada pihak ketiga manapun tanpa izin eksplisit Anda.</p>
+      <h3>5. Hak Anda</h3>
+      <p>Anda berhak meminta penghapusan data kapan saja dengan menghubungi kami via Instagram <a href="https://www.instagram.com/rantanginn" target="_blank" rel="noopener noreferrer">@rantanginn</a>.</p>
+    </div>
+    <button class="btn btn--cta btn--full" id="closePrivacyOk">Saya Mengerti</button>
+  </div>
+</div>
+
+<!-- ═══════════════════════════ THANK YOU POPUP MODAL ═══════════════════════════ -->
+<div class="modal-overlay" id="thankYouModal" role="dialog" aria-modal="true"
+     aria-labelledby="thankYouTitle" hidden>
+  <div class="modal modal--thankyou">
+    <div class="modal__logo">
+      <img src="logo png_2.png" alt="Rantanginn" width="64" height="64" loading="lazy" />
+      <span>Rantanginn</span>
+    </div>
+    <div class="thankyou__icon" aria-hidden="true">🎉</div>
+    <h2 id="thankYouTitle">Terima Kasih!</h2>
+    <p>Anda berhasil masuk ke daftar Early Access Rantanginn.<br />Kami akan menghubungi Anda saat layanan resmi dibuka.</p>
+    <div class="thankyou__actions">
+      <a href="https://www.instagram.com/rantanginn" target="_blank" rel="noopener noreferrer"
+         class="btn btn--cta btn--full">Follow @rantanginn →</a>
+      <button class="btn btn--outline btn--full" id="closeThankYou">Tutup</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
