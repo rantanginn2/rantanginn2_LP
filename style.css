@@ -225,7 +225,8 @@ button { font-family: var(--font-body); cursor: pointer; }
 }
 .hero__inner {
   display: grid; grid-template-columns: 1fr 1fr;
-  gap: 56px; align-items: start; position: relative; z-index: 1;
+  gap: 56px; align-items: center; position: relative; z-index: 1;
+  padding-bottom: 72px;
 }
 /* Left copy */
 .hero__copy { padding-top: 8px; }
@@ -259,17 +260,6 @@ button { font-family: var(--font-body); cursor: pointer; }
   color: #fff; font-weight: 700; font-size: .78rem; margin-left: -8px;
 }
 .avatar:first-child { margin-left: 0; }
-.hero__img-wrap { position: relative; border-radius: var(--radius-lg); overflow: visible; margin-top: 8px; }
-.hero__img { width: 100%; height: 320px; object-fit: cover; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); }
-.hero__img-overlay { position: absolute; inset: 0; pointer-events: none; }
-.img-badge {
-  position: absolute; font-size: .78rem; font-weight: 600;
-  background: rgba(255,255,255,.92); backdrop-filter: blur(8px);
-  padding: 6px 12px; border-radius: 100px; box-shadow: var(--shadow-sm);
-  color: var(--text);
-}
-.img-badge--tl { top: 16px; left: 16px; }
-.img-badge--br { bottom: 16px; right: 16px; }
 
 /* Hero form card */
 .hero__form-card {
@@ -327,7 +317,7 @@ button { font-family: var(--font-body); cursor: pointer; }
 .form-success p { font-size: .88rem; color: var(--text-muted); margin-bottom: 22px; }
 @keyframes bounceIn { 0%{transform:scale(.5);opacity:0} 70%{transform:scale(1.1)} 100%{transform:scale(1);opacity:1} }
 /* Hero wave */
-.hero__wave { position: relative; bottom: -2px; z-index: 3; margin-top: 64px; }
+.hero__wave { position: relative; bottom: -2px; z-index: 3; margin-top: 0; }
 .hero__wave svg { width: 100%; height: 70px; display: block; }
 
 /* ════════════════════════════════════════════════════
@@ -774,7 +764,6 @@ button { font-family: var(--font-body); cursor: pointer; }
   .hero__copy { text-align: center; }
   .hero__badges, .hero__proof { justify-content: center; }
   .hero__proof { margin: 0 auto 28px; }
-  .hero__img { height: 280px; }
   .hero__form-card { max-width: 560px; margin: 0 auto; }
 
   /* Benefit */
