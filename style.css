@@ -212,7 +212,9 @@ button { font-family: var(--font-body); cursor: pointer; }
    HERO
    ════════════════════════════════════════════════════ */
 .hero {
-  background: linear-gradient(140deg, #2A3C22 0%, #3d5226 55%, #5a6e35 100%);
+  background:
+    linear-gradient(140deg, rgba(42,60,34,.88) 0%, rgba(61,82,38,.85) 55%, rgba(90,110,53,.80) 100%),
+    url("BRAND PATTERN.png") center/cover no-repeat;
   padding: 40px 0 0; position: relative; overflow: hidden;
 }
 .hero__blob {
