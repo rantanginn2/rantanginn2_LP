@@ -107,6 +107,18 @@ button { font-family: var(--font-body); cursor: pointer; }
 .badge--coming-soon { background: rgba(246,149,32,.15); color: var(--accent-dark); border: 1px solid rgba(246,149,32,.3); }
 .badge--starter     { background: #e8f0d0; color: var(--primary-dark); }
 .badge--popular     { background: var(--accent); color: #fff; }
+
+/* Hero coming soon label — tanpa border, padding, background */
+.hero__label-coming-soon {
+  display: inline-block;
+  font-family: var(--font-head);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: var(--accent-dark);
+  margin-bottom: 16px;
+}
 .badge--value       { background: var(--secondary); color: #fff; }
 .badge--bestseller  { background: var(--accent); color: #fff; }
 .badge--healthy     { background: #c8e6c9; color: #2e7d32; }
