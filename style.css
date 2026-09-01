@@ -174,9 +174,8 @@ button { font-family: var(--font-body); cursor: pointer; }
 .navbar__brand { display: flex; align-items: center; gap: 10px; font-family: var(--font-head); font-weight: 800; font-size: 25px; color: var(--text); }
 .navbar__logo  { height: 50px; width: 50px; object-fit: contain; }
 .navbar__links { display: flex; align-items: center; gap: 28px; }
-.navbar__links a { font-size: .88rem; font-weight: 500; color: var(--text-body); transition: color .18s; }
+.navbar__links a { font-size: 25px; font-weight: 700; color: var(--text-body); transition: color .18s; }
 .navbar__links a:hover { color: var(--primary); }
-.navbar__cta { padding: 10px 22px; font-size: .85rem; }
 .navbar__burger {
   display: none; flex-direction: column; gap: 5px;
   background: none; border: none; padding: 6px; cursor: pointer;
@@ -756,7 +755,7 @@ button { font-family: var(--font-body); cursor: pointer; }
   :root { --section-py: 72px; }
 
   /* Navbar */
-  .navbar__links, .navbar__cta { display: none; }
+  .navbar__links { display: none; }
   .navbar__burger { display: flex; }
 
   /* Hero */
