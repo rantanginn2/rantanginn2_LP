@@ -278,27 +278,13 @@ button { font-family: var(--font-body); cursor: pointer; }
   padding: 36px 32px; box-shadow: var(--shadow-lg);
   position: relative; z-index: 2;
 }
-/* Promo banner */
-.promo-banner {
-  display: flex; align-items: flex-start; gap: 12px;
-  background: linear-gradient(90deg, rgba(246,149,32,.12), rgba(195,85,48,.08));
-  border: 1.5px solid rgba(246,149,32,.4); border-radius: var(--radius-md);
-  padding: 14px 16px; margin-bottom: 24px;
-}
-.promo-banner__icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 2px; }
-.promo-banner__title { font-size: .84rem; font-weight: 600; color: var(--text); line-height: 1.4; margin-bottom: 4px; }
-.promo-banner__discount { font-size: .82rem; color: var(--text-muted); }
-.promo-banner__discount strong { color: var(--secondary); font-weight: 700; font-size: .9rem; }
 /* Form header */
-.form-card__eyebrow { font-family: var(--font-head); font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--secondary); margin-bottom: 8px; }
-.form-card__title { font-family: var(--font-head); font-size: 1.55rem; font-weight: 800; color: var(--text); line-height: 1.2; margin-bottom: 8px; }
-.form-card__sub { font-size: .84rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px; }
+.form-card__eyebrow { font-family: var(--font-head); font-size: 20px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--secondary); margin-bottom: 8px; }
+.form-card__title { font-family: var(--font-head); font-size: 20px; font-weight: 800; color: var(--text); line-height: 1.2; margin-bottom: 8px; }
+.form-card__sub { font-size: .84rem; font-weight: 700; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px; }
 /* Slot counter */
 .slot-counter { margin-bottom: 22px; }
 .slot-counter__bar { height: 6px; background: var(--border); border-radius: 99px; overflow: hidden; margin-bottom: 6px; }
-.slot-counter__fill { height: 100%; background: linear-gradient(90deg, var(--primary), var(--accent)); border-radius: 99px; transition: width .8s ease; }
-.slot-counter__label { font-size: .78rem; color: var(--text-muted); }
-.slot-counter__label strong { color: var(--secondary); }
 /* Form groups */
 .form-group { display: flex; flex-direction: column; gap: 5px; margin-bottom: 18px; }
 .form-group label { font-family: var(--font-head); font-size: .82rem; font-weight: 700; color: var(--text); }
@@ -811,7 +797,6 @@ button { font-family: var(--font-body); cursor: pointer; }
   .hero { padding-top: 60px; }
   .hero__headline { font-size: 1.75rem; }
   .hero__form-card { padding: 24px 18px; }
-  .promo-banner { flex-direction: column; gap: 8px; }
 
   .problem__grid  { grid-template-columns: 1fr; }
   .solution__grid { grid-template-columns: 1fr; }
