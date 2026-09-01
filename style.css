@@ -347,6 +347,10 @@ button { font-family: var(--font-body); cursor: pointer; }
   transition: transform .22s, box-shadow .22s;
 }
 .solution-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+/* Body wrapper: teks h3 + p stack vertikal dengan gap atas-bawah */
+.solution-card__body {
+  display: flex; flex-direction: column; gap: 10px;
+}
 .solution-card__icon {
   width: 64px; height: 64px; flex-shrink: 0;
   background: #fff; border-radius: var(--radius-md);
@@ -354,8 +358,11 @@ button { font-family: var(--font-body); cursor: pointer; }
   box-shadow: var(--shadow-sm); padding: 10px;
 }
 .solution-card__icon img { width: 44px; height: 44px; object-fit: contain; }
-.solution-card h3 { font-family: var(--font-head); font-size: .98rem; font-weight: 800; color: var(--text); margin-bottom: 8px; }
-.solution-card p { font-size: .86rem; color: var(--text-muted); line-height: 1.6; }
+.solution-card h3 { font-family: var(--font-head); font-size: .98rem; font-weight: 800; color: var(--text); margin: 0; }
+.solution-card p { font-size: .86rem; font-weight: 700; color: var(--text-muted); line-height: 1.6; margin: 0; }
+
+/* Section header paragraph override untuk #solution */
+#solution .section-header p { font-size: 20px; font-weight: 700; color: var(--text-muted); }
 
 /* ════════════════════════════════════════════════════
    BENEFIT SECTION
