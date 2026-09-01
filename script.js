@@ -7,27 +7,23 @@
    ✅ FAQ accordion
    ✅ Form validation (2 fields: name + instagram)
    ✅ Google Sheets POST (Apps Script)
-   ✅ Thank You popup modal
+   ✅ Redirect ke thankyou.html setelah submit berhasil
    ✅ Privacy Policy modal
-   ✅ Event tracking via GTM dataLayer:
-        - generate_lead (form submit)
-        - form_submit
-        - cta_click
-        - page_view (otomatis dari GTM)
+   ✅ Anti-duplicate: sessionStorage flag
+   ✅ GTM tracking via dataLayer di thankyou.html:
+        - lead_form_submitted (hanya sekali, anti-refresh)
    ════════════════════════════════════════════════════
 
-   SETUP GOOGLE SHEETS (3 langkah):
-   1. Buka script.google.com → New Project
-   2. Paste kode dari google-sheet-script.gs
-   3. Deploy → Web App (Execute as Me, Anyone can access)
-   4. Copy URL deployment → tempel di SHEET_ENDPOINT di bawah
+   ALUR TRACKING:
+   Landing Page → isi form → submit berhasil
+        → sessionStorage flag di-set
+        → redirect ke thankyou.html
+        → thankyou.html baca flag → push lead_form_submitted
+        → flag dihapus (anti-duplicate)
+        → GTM mendeteksi event → Tag Fired ✅
    ════════════════════════════════════════════════════
 
    GTM: GTM-5F8ZB35Z
-   Semua event tracking dikirim via window.dataLayer.push()
-   lalu ditangkap oleh Tag di dalam GTM container.
-   Tidak ada gtag() atau fbq() hardcoded di file ini —
-   semua dikelola dari dashboard GTM.
    ════════════════════════════════════════════════════ */
 
 'use strict';
@@ -200,7 +196,7 @@ function initForm() {
 
   form.addEventListener('submit', async e => {
     e.preventDefault();
-    if (!validate()) return;
+    if (!validate()) return;      /* validasi gagal → jangan lanjut */
 
     setLoading(true);
 
@@ -211,20 +207,20 @@ function initForm() {
       source:    window.location.href,
     };
 
-    /* #3 Send to Google Sheets */
+    /* ── Kirim ke Google Sheets ── */
     await sendToSheet(data);
 
-    /* #7 Fire all conversion events */
-    trackConversion(data);
+    /*
+     * ── Set flag di sessionStorage SEBELUM redirect ──
+     * thankyou.html akan membaca flag ini untuk memastikan
+     * user benar-benar berasal dari submit form yang valid,
+     * bukan dari refresh atau akses langsung ke URL.
+     * Flag otomatis terhapus setelah dibaca (anti-duplicate).
+     */
+    sessionStorage.setItem('rantanginn_lead_submitted', 'true');
 
-    setLoading(false);
-
-    /* Show Thank You popup (#2 checklist) */
-    openModal('thankYouModal');
-
-    /* Also update inline success state */
-    form.hidden      = true;
-    successEl.hidden = false;
+    /* ── Redirect ke Thank You Page ── */
+    window.location.href = 'thankyou.html';
   });
 
   /* ── Validation ── */

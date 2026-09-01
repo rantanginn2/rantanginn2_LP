@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terima Kasih! — Rantanginn</title>
+  <meta name="robots" content="noindex, nofollow" />
+
+  <!-- ═══ Favicon ═══ -->
+  <link rel="icon" type="image/png" href="logo png_2.png" />
+
+  <!-- ═══ Fonts ═══ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- ═══════════════════════════════════════════════════════════
+       Google Tag Manager — GTM-5F8ZB35Z
+       Container yang sama dengan landing page.
+       ════════════════════════════════════════════════════════ -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5F8ZB35Z');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- ═══════════════════════════════════════════════════════════
+       LEAD CONVERSION TRACKING
+       Anti-duplicate: cek sessionStorage sebelum push event.
+       Event hanya dikirim SEKALI per sesi browser.
+       Refresh halaman tidak akan men-trigger event ulang.
+       ════════════════════════════════════════════════════════ -->
+  <script>
+    (function() {
+      'use strict';
+
+      /*
+       * Cek apakah user berasal dari submit form yang valid.
+       * Flag 'rantanginn_lead_submitted' di sessionStorage
+       * di-set oleh script.js setelah form berhasil dikirim.
+       *
+       * Jika flag tidak ada → user langsung buka URL ini
+       * tanpa submit form → jangan fire event.
+       */
+      var submitted = sessionStorage.getItem('rantanginn_lead_submitted');
+
+      if (submitted === 'true') {
+        /* Hapus flag segera — mencegah duplicate jika refresh */
+        sessionStorage.removeItem('rantanginn_lead_submitted');
+
+        /* Push event lead_form_submitted ke dataLayer */
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event:            'lead_form_submitted',  /* ← GTM Trigger mendengarkan ini */
+          event_category:   'Lead Form',
+          event_label:      'Early Access Registration',
+          page_type:        'thank_you',
+          value:            1,
+        });
+
+        console.log('%c✅ lead_form_submitted pushed to dataLayer', 'color:#677333;font-weight:bold');
+      } else {
+        /* User refresh atau akses langsung — tidak fire event */
+        console.log('%c⚠️ Thank You page: no valid submission detected, tracking skipped.', 'color:#e07b39;font-weight:bold');
+      }
+    })();
+  </script>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* ── Thank You Page specific styles ── */
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: var(--bg-warm);
+    }
+    .ty-wrapper {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 24px;
+    }
+    .ty-card {
+      background: var(--bg-white);
+      border-radius: 32px;
+      padding: 56px 48px;
+      max-width: 560px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(42,60,34,.12);
+    }
+    .ty-logo {
+      width: 64px;
+      height: 64px;
+      object-fit: contain;
+      margin: 0 auto 16px;
+    }
+    .ty-icon {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      display: block;
+    }
+    .ty-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: #2A3C22;
+      margin-bottom: 14px;
+      line-height: 1.2;
+    }
+    .ty-desc {
+      font-family: 'Poppins', sans-serif;
+      font-size: .95rem;
+      color: #7a8a6a;
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+    .ty-desc strong { color: #2A3C22; }
+    .ty-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .ty-btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: #C35530;
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: .95rem;
+      border-radius: 100px;
+      padding: 15px 32px;
+      border: 2px solid #C35530;
+      text-decoration: none;
+      transition: all .22s;
+      box-shadow: 0 4px 18px rgba(195,85,48,.3);
+    }
+    .ty-btn-primary:hover {
+      background: #a04426;
+      border-color: #a04426;
+      transform: translateY(-2px);
+    }
+    .ty-btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      color: #677333;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: .88rem;
+      border-radius: 100px;
+      padding: 12px 28px;
+      border: 2px solid #677333;
+      text-decoration: none;
+      transition: all .22s;
+    }
+    .ty-btn-secondary:hover {
+      background: #677333;
+      color: #fff;
+    }
+    .ty-note {
+      margin-top: 24px;
+      font-size: .78rem;
+      color: #7a8a6a;
+    }
+    @media (max-width: 600px) {
+      .ty-card { padding: 36px 24px; }
+      .ty-title { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- GTM noscript — wajib tepat setelah <body> -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5F8ZB35Z"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="ty-wrapper">
+  <div class="ty-card">
+    <img src="logo png_2 copy.png" alt="Rantanginn" class="ty-logo" />
+    <span class="ty-icon" aria-hidden="true">🎉</span>
+    <h1 class="ty-title">Terima Kasih!</h1>
+    <p class="ty-desc">
+      Anda berhasil masuk ke daftar <strong>Early Access Rantanginn</strong>.<br />
+      Tim kami akan segera menghubungi Anda via <strong>Instagram DM</strong>
+      saat layanan resmi diluncurkan di Depok.
+    </p>
+    <div class="ty-actions">
+      <a href="https://www.instagram.com/rantanginn"
+         target="_blank" rel="noopener noreferrer"
+         class="ty-btn-primary">
+        Follow @rantanginn di Instagram →
+      </a>
+      <a href="index.html" class="ty-btn-secondary">
+        ← Kembali ke Halaman Utama
+      </a>
+    </div>
+    <p class="ty-note">
+      Pastikan DM Instagram kamu terbuka agar kami bisa menghubungimu.
+    </p>
+  </div>
+</div>
+
+</body>
+</html>
