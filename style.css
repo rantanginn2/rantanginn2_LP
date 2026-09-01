@@ -323,15 +323,18 @@ button { font-family: var(--font-body); cursor: pointer; }
    PROBLEM SECTION
    ════════════════════════════════════════════════════ */
 .problem__grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+
+/* Section header paragraph override untuk #problem */
+#problem .section-header p { font-size: 20px; font-weight: 700; color: var(--text-muted); }
 .problem-card {
   background: var(--bg-white); border: 1px solid var(--border-light);
   border-radius: var(--radius-lg); padding: 36px 28px; text-align: center;
   transition: transform .22s, box-shadow .22s;
 }
 .problem-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
-.problem-card__icon { font-size: 2.8rem; margin-bottom: 18px; }
+.problem-card__icon { font-size: 3rem; margin-bottom: 18px; }
 .problem-card h3 { font-family: var(--font-head); font-size: 1.05rem; font-weight: 800; color: var(--text); margin-bottom: 10px; }
-.problem-card p { font-size: .88rem; color: var(--text-muted); line-height: 1.65; }
+.problem-card p { font-size: .88rem; font-weight: 700; color: var(--text-muted); line-height: 1.65; }
 
 /* ════════════════════════════════════════════════════
    SOLUTION SECTION
