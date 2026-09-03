@@ -168,6 +168,7 @@ button { font-family: var(--font-body); cursor: pointer; }
   font-size: inherit; font-family: inherit; cursor: pointer;
 }
 .privacy-trigger:hover { color: var(--primary-dark); }
+.privacy-trigger--bold { font-weight: 700; }
 
 /* ════════════════════════════════════════════════════
    NAVBAR
