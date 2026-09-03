@@ -335,6 +335,11 @@ button { font-family: var(--font-body); cursor: pointer; }
 
 /* Section header paragraph override untuk #problem */
 #problem .section-header p { font-size: 20px; font-weight: 700; color: var(--text-muted); }
+
+/* Section header paragraph override untuk #how, #pricing, #menu */
+#how .section-header p,
+#pricing .section-header p,
+#menu .section-header p { font-size: 20px; font-weight: 700; color: var(--text-muted); }
 .problem-card {
   background: var(--bg-white); border: 1px solid var(--border-light);
   border-radius: var(--radius-lg); padding: 36px 28px; text-align: center;
@@ -426,7 +431,7 @@ button { font-family: var(--font-body); cursor: pointer; }
   font-size: 1rem; font-weight: 800;
   color: var(--text); margin-bottom: 10px;
 }
-.how-step__body p { font-size: .86rem; color: var(--text-muted); line-height: 1.65; }
+.how-step__body p { font-size: .86rem; font-weight: 700; color: var(--text-muted); line-height: 1.65; }
 .how__arrow {
   flex-shrink: 0;
   margin-top: 56px;
@@ -472,7 +477,7 @@ button { font-family: var(--font-body); cursor: pointer; }
 }
 .pricing-card__detail {
   display: flex; align-items: center; gap: 8px;
-  font-size: .82rem; color: var(--text-muted);
+  font-size: .82rem; font-weight: 700; color: var(--text-muted);
   margin-bottom: 20px;
 }
 .pricing-card__price {
@@ -487,7 +492,7 @@ button { font-family: var(--font-body); cursor: pointer; }
   color: var(--primary); line-height: 1;
 }
 .price-per small { font-size: .75rem; font-weight: 500; color: var(--text-muted); margin-left: 4px; }
-.price-total { font-size: .84rem; color: var(--text-muted); }
+.price-total { font-size: .84rem; font-weight: 700; color: var(--text-muted); }
 .price-total strong { color: var(--text); font-weight: 700; }
 .pricing-card--featured .price-per { color: var(--secondary); }
 .pricing-card__benefits {
@@ -496,7 +501,7 @@ button { font-family: var(--font-body); cursor: pointer; }
   margin-bottom: 24px;
 }
 .pricing-card__benefits li {
-  font-size: .84rem; color: var(--text-body);
+  font-size: .84rem; font-weight: 700; color: var(--text-body);
   display: flex; align-items: flex-start; gap: 8px;
 }
 
@@ -516,14 +521,14 @@ button { font-family: var(--font-body); cursor: pointer; }
   padding: 20px 24px;
 }
 .addon-card__info h4 { font-family: var(--font-head); font-size: .9rem; font-weight: 700; color: var(--text); margin-bottom: 4px; }
-.addon-card__info p  { font-size: .8rem; color: var(--text-muted); }
+.addon-card__info p  { font-size: .8rem; font-weight: 700; color: var(--text-muted); }
 .addon-card__price {
   font-family: var(--font-head);
   font-size: 1rem; font-weight: 900;
   color: var(--primary); white-space: nowrap; flex-shrink: 0;
 }
 .addon-card__price small { font-size: .7rem; font-weight: 400; color: var(--text-muted); }
-.pricing__disclaimer { font-size: .76rem; color: var(--text-muted); font-style: italic; margin-top: 8px; }
+.pricing__disclaimer { font-size: .76rem; font-weight: 700; color: var(--text-muted); font-style: italic; margin-top: 8px; }
 
 /* ════════════════════════════════════════════════════
    MENU PREVIEW
@@ -556,7 +561,7 @@ button { font-family: var(--font-body); cursor: pointer; }
 }
 .menu-card__body { padding: 20px; }
 .menu-card__category {
-  font-size: .72rem; font-weight: 600; font-family: var(--font-head);
+  font-size: .72rem; font-weight: 700; font-family: var(--font-head);
   color: var(--primary); text-transform: uppercase;
   letter-spacing: .07em; display: block; margin-bottom: 6px;
 }
@@ -576,7 +581,7 @@ button { font-family: var(--font-body); cursor: pointer; }
 .menu-card__more { text-align: center; padding: 32px 24px; }
 .menu-card__more-icon { font-size: 2.8rem; display: block; margin-bottom: 16px; }
 .menu-card__more h3 { font-family: var(--font-head); font-size: 1.1rem; font-weight: 800; color: #fff; margin-bottom: 10px; }
-.menu-card__more p { font-size: .84rem; color: rgba(255,255,255,.75); margin-bottom: 22px; line-height: 1.6; }
+.menu-card__more p { font-size: .84rem; font-weight: 700; color: rgba(255,255,255,.75); margin-bottom: 22px; line-height: 1.6; }
 .menu-card--cta .btn--cta { background: var(--accent); border-color: var(--accent); color: #fff; }
 .menu-card--cta .btn--cta:hover { background: var(--accent-dark); border-color: var(--accent-dark); }
 
@@ -589,7 +594,7 @@ button { font-family: var(--font-body); cursor: pointer; }
   padding: 48px 32px;
 }
 .menu__bottom-cta h3 { font-family: var(--font-head); font-size: 1.3rem; font-weight: 800; color: var(--text); margin-bottom: 10px; }
-.menu__bottom-cta p  { font-size: .9rem; color: var(--text-muted); max-width: 480px; margin: 0 auto 24px; }
+.menu__bottom-cta p  { font-size: .9rem; font-weight: 700; color: var(--text-muted); max-width: 480px; margin: 0 auto 24px; }
 
 /* ════════════════════════════════════════════════════
    SOCIAL PROOF
