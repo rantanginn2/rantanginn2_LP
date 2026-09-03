@@ -90,7 +90,7 @@ button { font-family: var(--font-body); cursor: pointer; }
   color: var(--text);
   margin-bottom: 14px;
 }
-.section-header p { font-size: 1rem; color: var(--text-muted); max-width: 540px; margin: 0 auto; }
+.section-header p { font-size: 1rem; font-weight: 700; color: var(--text-muted); max-width: 540px; margin: 0 auto; }
 
 /* ── Typography helpers ── */
 .text-accent { color: var(--accent); }
@@ -341,8 +341,8 @@ button { font-family: var(--font-body); cursor: pointer; }
 #pricing .section-header p,
 #menu .section-header p { font-size: 20px; font-weight: 700; color: var(--text-muted); }
 
-/* Social proof title 20px bold */
-#social-proof .section-header h2 { font-size: 20px; font-weight: 700; }
+/* Social proof title 30px bold putih */
+#social-proof .section-header h2 { font-size: 30px; font-weight: 700; color: #ffffff; }
 
 /* FAQ title bold */
 #faq .section-header h2 { font-weight: 800; }
@@ -576,7 +576,7 @@ button { font-family: var(--font-body); cursor: pointer; }
   font-size: .98rem; font-weight: 800; color: var(--text);
   margin-bottom: 8px;
 }
-.menu-card__body p { font-size: .81rem; color: var(--text-muted); line-height: 1.6; }
+.menu-card__body p { font-size: .81rem; font-weight: 700; color: var(--text-muted); line-height: 1.6; }
 
 /* CTA card in menu grid */
 .menu-card--cta {
@@ -612,7 +612,7 @@ button { font-family: var(--font-body); cursor: pointer; }
   margin-bottom: 48px;
 }
 .proof-card {
-  background: rgba(255,255,255,.07);
+  background: rgba(255,255,255,.1);
   border: 1px solid rgba(255,255,255,.12);
   border-radius: var(--radius-lg);
   padding: 32px 28px;
