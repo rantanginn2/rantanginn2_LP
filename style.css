@@ -285,9 +285,6 @@ button { font-family: var(--font-body); cursor: pointer; }
 .form-card__eyebrow { font-family: var(--font-head); font-size: 20px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--secondary); margin-bottom: 8px; }
 .form-card__title { font-family: var(--font-head); font-size: 20px; font-weight: 800; color: var(--text); line-height: 1.2; margin-bottom: 8px; }
 .form-card__sub { font-size: .84rem; font-weight: 700; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px; }
-/* Slot counter */
-.slot-counter { margin-bottom: 22px; }
-.slot-counter__bar { height: 6px; background: var(--border); border-radius: 99px; overflow: hidden; margin-bottom: 6px; }
 /* Form groups */
 .form-group { display: flex; flex-direction: column; gap: 5px; margin-bottom: 18px; }
 .form-group label { font-family: var(--font-head); font-size: .82rem; font-weight: 700; color: var(--text); }
