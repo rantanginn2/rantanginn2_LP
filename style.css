@@ -343,6 +343,7 @@ button { font-family: var(--font-body); cursor: pointer; }
 
 /* Social proof title 30px bold putih */
 #social-proof .section-header h2 { font-size: 30px; font-weight: 700; color: #ffffff; }
+#social-proof .section-header p  { color: #ffffff; }
 
 /* FAQ title bold */
 #faq .section-header h2 { font-weight: 800; }
