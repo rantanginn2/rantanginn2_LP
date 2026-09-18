@@ -155,6 +155,9 @@ button { font-family: var(--font-body); cursor: pointer; }
 .btn--lg  { padding: 16px 40px; font-size: 1rem; }
 .btn--full { width: 100%; }
 
+/* Submit button lead form — rata tengah */
+#submitBtn { text-align: center; justify-content: center; margin: 0 auto; display: flex; }
+
 /* ── Required / Error ── */
 .required { color: var(--secondary); }
 .form-error { font-size: .78rem; color: var(--secondary); display: none; margin-top: 4px; }
